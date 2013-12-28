@@ -1,0 +1,16 @@
+{
+  "name": "PostalBit-FrontEnd",
+  "version": "0.0.1",
+  "description": "Front-End of PostalBit",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Agon Bina <agon_bina@hotmail.com>",
+  "license": "BSD",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-compass": "~0.7.0"
+  }
+}
