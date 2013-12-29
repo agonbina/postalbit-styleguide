@@ -1,0 +1,157 @@
+@import "../globals";
+
+// We use these to control header font styles
+$header-font-family: $body-font-family !default;
+$header-font-weight: 300 !default;
+$header-font-style: normal !default;
+$header-font-color: #222 !default;
+
+// We use these to control header font sizes
+$h1-font-size: 48px !default;
+$h2-font-size: 36px !default;
+$h3-font-size: 24px !default;
+$h4-font-size: 20px !default;
+$h5-font-size: 18px !default;
+$h6-font-size: 16px !default;
+
+// Configure the base-line-height to use compass's establish-baseline for vertical rhythm
+$base-line-height: 24px;
+@include establish-baseline;
+
+
+// A general <small> styling
+$small-font-size: 60% !default;
+$small-font-color: scale-color($header-font-color, $lightness: 35%) !default;
+
+// We use these to style paragraphs
+$paragraph-font-family: inherit !default;
+$paragraph-font-weight: normal !default;
+$paragraph-font-size: $base-font-size !default;
+$paragraph-margin: 1.5em 0 !default;
+
+
+// We use these to style anchors
+$anchor-text-decoration: none !default;
+$anchor-font-color: $primary-color !default;
+$anchor-font-color-hover: scale-color($primary-color, $lightness: -14%) !default;
+
+
+// We use these to style the <hr> element
+$hr-border-width: 1px !default;
+$hr-border-style: solid !default;
+$hr-border-color: #ddd !default;
+$hr-margin: em-calc(20px) !default;
+
+
+/* Typography resets */
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin:0;
+  padding:0;
+}
+
+/* Default Link Styles */
+a {
+  color: $anchor-font-color;
+  text-decoration: $anchor-text-decoration;
+  line-height: inherit;
+
+  &:hover,
+  &:focus { color: $anchor-font-color-hover; }
+
+  img { border:none; }
+}
+
+/* Default paragraph styles */
+p {
+  font-family: $paragraph-font-family;
+  font-weight: $paragraph-font-weight;
+  font-size: $paragraph-font-size;
+  margin: $paragraph-margin;
+
+  &.lead { @include leader; @include trailer;}
+}
+
+// Placeholder to give the headers some breathing space and maintain vertical rhythm
+%important {
+  @include leader;
+  @include trailer;
+}
+
+/* Default header styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font-family;
+  font-weight: $header-font-weight;
+  font-style: $header-font-style;
+  color: $header-font-color;
+
+  small {
+    font-size: $small-font-size;
+    color: $small-font-color;
+    line-height: 0;
+  }
+
+  &.important { @extend %important; }
+}
+
+h1 { @include adjust-font-size-to($h1-font-size); }
+h2 { @include adjust-font-size-to($h2-font-size); }
+h3 { @include adjust-font-size-to($h3-font-size); }
+h4 { @include adjust-font-size-to($h4-font-size); }
+h5 { @include adjust-font-size-to($h5-font-size); }
+h6 { @include adjust-font-size-to($h6-font-size); }
+
+
+hr {
+  border: $hr-border-style $hr-border-color;
+  border-width: $hr-border-width 0 0;
+  clear: both;
+  margin: $hr-margin 0 ($hr-margin - em-calc(1));
+  height: 0;
+}
+
+/* Helpful Typography Defaults */
+em,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+strong,
+b {
+  font-weight: bold;
+  line-height: inherit;
+}
+
+small {
+  font-size: $small-font-size;
+  line-height: inherit;
+}
+
+/* Lists */
+ul,
+ol,
+dl {
+  font-size: $paragraph-font-size;
+  line-height: $base-line-height;
+  margin: $paragraph-margin;
+  //list-style-position: $list-style-position;
+  font-family: $paragraph-font-family;
+}

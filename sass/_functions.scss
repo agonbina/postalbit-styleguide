@@ -1,0 +1,14 @@
+//
+// Global functions
+//
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+// Convert px - to - em
+$em-base: 16px;
+@function em-calc($value, $base: $em-base) {
+  @return (strip-unit($value) / strip-unit($base)) * 1em;
+}
+

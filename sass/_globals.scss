@@ -1,0 +1,143 @@
+@import "functions";
+
+//
+// Global Variables
+//
+
+// $debug - set true to activate things like '.grid'
+$debug: true;
+
+$base-font-size: 100% !default;
+$base-line-height: 150% !default;
+
+// body styles
+$body-bg: #fff !default;
+$body-font-color: #222 !default;
+$body-font-family: source-sans-pro, Helvetica, Arial, sans-serif !default;
+$body-font-weight: normal !default;
+$body-font-style: normal !default;
+
+$font-smoothing: antialiased !default;
+
+// radius definitions
+$global-radius: 3px !default;
+$global-rounded: 1000px !default;
+
+// cursor values
+$cursor-crosshair-value: crosshair !default;
+$cursor-default-value: default !default;
+$cursor-pointer-value: pointer !default;
+$cursor-help-value: help !default;
+$cursor-text-value: text !default;
+
+
+//
+// Global mixins and placeholders
+//
+
+// add a grid using gradient background to check vertical rhythm of typography
+%background-grid {
+  background-image: -webkit-linear-gradient(#eee .05em, transparent .05em);
+  background-image:    -moz-linear-gradient(#eee 1px, transparent 1px);
+  background-image:     -ms-linear-gradient(#eee 1px, transparent 1px);
+  background-image:      -o-linear-gradient(#eee 1px, transparent 1px);
+  background-image:         linear-gradient(#eee 1px, transparent 1px);
+  background-size: 100% 1.5em;
+}
+.grid {
+  @if $debug == true { @extend %background-grid; }
+}
+
+//
+// Colors
+//
+
+$white:         #fff !default;
+$black:         #000 !default;
+$light-grey:    #EBEBEB !default;
+$light-blue:    #BADCE9 !default;
+$dark-blue:     #4389C2 !default;
+$cool-orange:   #FFA80D !default;
+
+$primary-color: $dark-blue !default;
+$secondary-color: $cool-orange !default;
+
+$alert-color: #f04124 !default;
+$success-color: #43AC6A !default;
+$warning-color: #f08a24 !default;
+$info-color: #a0d3e8 !default;
+
+
+//
+// Global resets
+//
+
+// Set box-sizing globally to handle padding and border widths
+*,
+*:before,
+*:after {
+  @include box-sizing('border-box');
+}
+
+html,
+body { font-size: $base-font-size; }
+
+// Default body styles
+body {
+  background: $body-bg;
+  color: $body-font-color;
+  padding: 0;
+  margin: 0;
+  font-family: $body-font-family;
+  font-weight: $body-font-weight;
+  font-style: $body-font-style;
+  line-height: $base-line-height;
+  position: relative;
+  cursor: $cursor-default-value;
+}
+
+a:hover { cursor: $cursor-pointer-value; }
+
+// Grid Defaults to get images and embeds to work properly
+img,
+object,
+embed { max-width: 100%; height: auto; }
+
+object,
+embed { height: 100%; }
+img { -ms-interpolation-mode: bicubic; }
+
+#map_canvas,
+.map_canvas {
+  img,
+  embed,
+  object { max-width: none !important;
+  }
+}
+
+// Miscellaneous useful HTML classes
+.left   { float: left !important; }
+.right  { float: right !important; }
+.clearfix     { @include clearfix; }
+.text-left    { text-align: left !important; }
+.text-right   { text-align: right !important; }
+.text-center  { text-align: center !important; }
+.text-justify { text-align: justify !important; }
+.hide         { display: none; }
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Get rid of gap under images by making them display: inline-block; by default
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+// Make sure textarea takes on height automatically
+textarea { height: auto; min-height: 50px; }
+
+// Make select elements 100% width by default
+select { width: 100%; }
