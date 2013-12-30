@@ -1,0 +1,27 @@
+// Custom button mixins
+// -----------------------------------------------------------------------
+
+
+//
+// Used to create a default button base
+//
+// $style - Sets base styles if true. Default: true.
+// $display - Used to control display property. Default: $button-display || inline-block
+//
+
+@mixin button-base($style: true, $display: $button-display) {
+  @if $style {
+    border-style: $button-border-style;
+    border-width: $button-border-width;
+    cursor: $cursor-pointer-value;
+    font-family: $button-font-family;
+    font-weight: $button-font-weight;
+    line-height: normal;
+    margin: 0 0 $button-margin-bottom;
+    position: relative;
+    text-decoration: none;
+    text-align: $button-font-align;
+  }
+  @if $display { display: $display; }
+}
+

@@ -1,0 +1,45 @@
+@import "../globals";
+
+// Used to build padding for the buttons
+$button-small: em-calc(16px) !default;
+$button-medium: em-calc(18px) !default;
+$button-large: em-calc(20px) !default;
+
+
+// Display properties
+$button-display: inline-block;
+$button-margin-bottom: 5px !default;
+
+// Text styles
+$button-font-family: $body-font-family !default;
+$button-font-color: #fff !default;
+$button-font-color-alt: #333 !default;
+
+$button-font-small: $button-small !default;
+$button-font-medium: $button-medium !default;
+$button-font-large: $button-large !default;
+
+$button-font-weight: normal !default;
+$button-font-align: center !default;
+
+// Border styles
+$button-border-width: 0px !default;
+$button-border-style: none !default;
+
+// Border radius
+$button-radius: $global-radius !default;
+$button-round: $global-radius !default;
+
+// Opacity
+$button-disabled-opacity: 0.7 !default;
+
+
+// Custom button extends and mixins
+// -----------------------------------------------------------------------
+@import "buttons/mixins";
+@import "buttons/extends";
+
+
+button, .button, a.button, input[type=submit] {
+  @include button-base;
+}

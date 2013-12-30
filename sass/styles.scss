@@ -1,11 +1,10 @@
 // Core libraries
 // ------------------------------------------------------------------------------
-@import "compass";
-
+@import "compass/compass";
 
 // Resets
 // ------------------------------------------------------------------------------
-@import "normalize";
+//@import "normalize";
 
 
 // Globals and configuration
@@ -17,6 +16,7 @@
 // ------------------------------------------------------------------------------
 @import "typography/typography";
 
-p {
-  color: black;
-}
+
+// Components ( UI Elements )
+// ------------------------------------------------------------------------------
+@import "components/buttons";
