@@ -9,7 +9,7 @@
 // $display - Used to control display property. Default: $button-display || inline-block
 //
 
-@mixin button-base($style: true, $display: $button-display) {
+@mixin button-base($style: true, $display: $button-display, $uppercase: true) {
   @if $style {
     border-style: $button-border-style;
     border-width: $button-border-width;
@@ -21,7 +21,32 @@
     position: relative;
     text-decoration: none;
     text-align: $button-font-align;
+    letter-spacing: $button-font-letter-spacing;
+    @if $uppercase { text-transform: uppercase; }
+
   }
   @if $display { display: $display; }
 }
 
+//
+// Used to add button size styles
+//
+// $padding - padding size for the button. Default: $button-medium ||= em-calc(18px)
+
+@mixin button-size($padding: $button-medium) {
+  padding: ($padding / 2) ($padding * 1.5);
+
+  // font-size is determined based on mixing input
+  @if $padding == $button-medium { font-size: $button-font-medium; }
+  @else if $padding == $button-small { font-size: $button-font-small; }
+  @else if $padding == $button-large { font-size: $button-font-large; }
+}
+
+//
+// Used to add color styles
+//
+
+@mixin button-style($bg: $primary-color) {
+  background-color: $bg;
+  color: $button-font-color;
+}
