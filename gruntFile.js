@@ -15,18 +15,28 @@ module.exports = function (grunt) {
         watch: {
             source: {
                 files: ['sass/**/*.scss'],
-                tasks: ['compass'],
+                tasks: ['clean', 'compass']
+            },
+            styles: {
+                files: ['css/*.css'],
                 options: {
-                    livereload: true // needed to run LiveReload
+                    livereload: true
                 }
+            }
+        },
+
+        clean: {
+            refresh: {
+                src: ['css']
             }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-compass');
 
     // Default task(s)
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['watch:source']);
 
 };
