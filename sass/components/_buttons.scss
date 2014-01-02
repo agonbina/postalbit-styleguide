@@ -21,8 +21,9 @@ $button-font-align: center !default;
 $button-font-letter-spacing: 1px !default;
 
 // Border styles
-$button-border-width: 0px !default;
+$button-border-width: 0 !default;
 $button-border-style: none !default;
+$button-border-color: white !default;
 
 // Border radius
 $button-radius: $global-radius !default;
@@ -42,19 +43,17 @@ $cancel-action-color: $warning-color !default;
 @import "buttons/extends";
 
 
-button, .button, a.button {
+button, .button {
   @include button-base;
   @include button-size;
   @include button-style;
 
   @include single-transition(background-color, 0.2s, ease-in);
 
-  &.secondary {
-    @include button-style($secondary-color);
-    &:hover {
-      background-color: darken($secondary-color, 10%);
-    }
-  }
+  &.secondary { @include button-style($secondary-color); }
+  &.success { @include button-style($bg: $success-color); }
+  &.alert { @include button-style($bg: $alert-color); }
+
 
   &.small {
     @include button-size($button-small);
@@ -63,7 +62,10 @@ button, .button, a.button {
     @include button-size($button-large);
   }
 
-  &:hover {
-    background-color: darken($primary-color, 10%);
+  &.disabled, &[disabled] {
+    @include button-style($bg:$primary-color, $disabled:true);
+    &.secondary { @include button-style($bg:$secondary-color, $disabled:true); }
+    &.success { @include button-style($bg:$success-color, $disabled:true); }
+    &.alert { @include button-style($bg:$alert-color, $disabled:true); }
   }
 }

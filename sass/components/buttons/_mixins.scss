@@ -11,8 +11,7 @@
 
 @mixin button-base($style: true, $display: $button-display, $uppercase: true) {
   @if $style {
-    border-style: $button-border-style;
-    border-width: $button-border-width;
+    border: $button-border-width $button-border-style $button-border-color;
     cursor: $cursor-pointer-value;
     font-family: $button-font-family;
     font-weight: $button-font-weight;
@@ -46,7 +45,22 @@
 // Used to add color styles
 //
 
-@mixin button-style($bg: $primary-color) {
+@mixin button-style($bg: $primary-color, $disabled: false) {
   background-color: $bg;
   color: $button-font-color;
+
+  &:hover,
+  &:focus {
+    color: $button-font-color;
+    background-color: darken($bg, 10%);
+  }
+
+  @if $disabled {
+    cursor: $cursor-default-value;
+    opacity: $button-disabled-opacity;
+    @include box-shadow(none);
+
+    &:hover,
+    &:focus { background-color: $bg; }
+  }
 }
