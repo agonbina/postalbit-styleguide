@@ -1,0 +1,37 @@
+// Input mixins
+// -----------------------------------------------------------------------
+
+// Set a base styling for a form element
+@mixin input-element {
+  background-color: $input-bg-color;
+  font-family: $input-font-family;
+  border: $input-border-width $input-border-style $input-border-color;
+  color: $input-font-color;
+  display: block;
+  font-size: $input-font-size;
+
+  margin: 0 0 $form-spacing 0;
+  padding: $form-spacing / 2;
+  height: ($input-font-size + ($form-spacing * 1.5) - em-calc(1px));
+  width: 100%;
+
+  // Animate the border-color change
+  @include single-transition(border-color, 0.5s);
+
+  &:focus {
+    background: $input-focus-bg-color;
+    border-width: $input-focus-border-width;
+    border-color: $input-focus-border-color;
+    outline: none;
+  }
+
+  &:hover {
+    border-color: $input-hover-border-color;
+    border-width: $input-hover-border-width;
+  }
+
+  &[disabled] {
+    border: none;
+    background-color: $input-disabled-bg;
+  }
+}

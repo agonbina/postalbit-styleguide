@@ -7,9 +7,29 @@
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
 </head>
-<body>
+<body style="background: #ECE9E3">
+
+<div style="width: 90%; margin: 0 auto;">
+    <h1>Presenting dem forms</h1>
 
 
+    <form action="" style="padding: 5%">
+        <div class="row">
+            <input type="email" placeholder="E-mail"/>
+            <input type="password" placeholder="Password"/>
+            <input type="tel" placeholder="Tel #"/>
+            <input type="text" placeholder="This input field is disabled" disabled/>
+            <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Type in your comment here..."></textarea>
+            <button class="button" type="submit">Submit</button>
+        </div>
+    </form>
+    <div>
+        more text
+    </div>
+</div>
+
+
+<div style="display: none">
     <h1>Presenting dem buttons </h1>
     <div>
         <a href="#" class="small button">SAVE</a>
@@ -33,7 +53,7 @@
         <a href="#" class="success small button">Save</a>
         <a href="#" class="success small disabled button">This is Disabled</a>
     </div>
-
+</div>
 
 </body>
 </html>

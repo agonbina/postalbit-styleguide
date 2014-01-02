@@ -1,0 +1,53 @@
+@import "input/mixins";
+
+// Error messages for input and labels
+$input-error-message-padding: em-calc(6px) !default;
+$input-error-message-top: -1px;
+$input-error-message-font-size: em-calc(14px) !default;
+$input-error-message-font-weight: normal !default;
+$input-error-message-font-style: bold !default;
+$input-error-message-font-color: #fff !default;
+$input-error-message-font-color-alt: #333 !default;
+
+// Import the input mixins
+@import "input/mixins";
+
+%input {
+
+}
+
+/* We use this to get basic styling on all basic form elements */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+  @include input-element;
+}
+
+/* Adjust margin for form elements below */
+input[type="file"],
+input[type="checkbox"],
+input[type="radio"],
+select {
+  margin: 0 0 $form-spacing 0;
+}
+
+/* Normalize file input width */
+input[type="file"] {
+  width:100%;
+}
+
+/* Normalize textarea width not to expand beyond parent width*/
+textarea {
+  max-width: 100%;
+}

@@ -1,0 +1,57 @@
+@import "../globals";
+
+//
+// Global variables for forms
+//
+$form-spacing: em-calc(16px) !default;
+
+// Global input settings
+$input-display: inline-block !default;
+$input-box-shadow: none !default;
+
+// Font settings
+$input-font-family: inherit !default;
+$input-font-color: rgba(0, 0, 0, .75) !default;
+$input-font-size: em-calc(18px) !default;
+
+// Color settings
+$input-bg-color: #fff !default;
+$input-border-color: scale_color(#fff, $lightness: -20%) !default;
+
+$input-focus-bg-color: rgba(#fff, 0.05) !default;
+$input-focus-border-color: $tertiary-color !default;
+$input-focus-border-width: 2px !default;
+
+$input-hover-border-color: $dark-brown !default;
+$input-hover-border-width: 2px !default;
+
+$input-disabled-bg: #ddd !default;
+
+// Border styles
+$input-border-style: solid !default;
+$input-border-width: 0px !default;
+
+
+//
+// Global label settings
+//
+
+
+
+//
+// Global form mixins, used for rows, basic styling
+//
+@import "forms/mixins";
+
+
+// Form ui elements
+// -----------------------------------------------------------------------
+@import "forms/input";
+@import "forms/label";
+
+
+form {
+  margin: 0 0 $form-spacing 0;
+
+  @include form-row-base;
+}

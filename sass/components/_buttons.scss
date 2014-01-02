@@ -69,3 +69,8 @@ button, .button {
     &.alert { @include button-style($bg:$alert-color, $disabled:true); }
   }
 }
+
+form button {
+  display: block;
+  margin-top: $button-margin-bottom;
+}

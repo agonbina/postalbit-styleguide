@@ -10,9 +10,12 @@ $light-grey:    #EBEBEB !default;
 $light-blue:    #BADCE9 !default;
 $dark-blue:     #4389C2 !default;
 $cool-orange:   #FFA80D !default;
+$dark-green:    #00805D !default;
+$dark-brown:    darken(#ECE9E3, 25%) !default;
 
 $primary-color: $dark-blue !default;
 $secondary-color: $cool-orange !default;
+$tertiary-color: $dark-green !default;
 
 $alert-color: #f04124 !default;
 $success-color: #43AC6A !default;

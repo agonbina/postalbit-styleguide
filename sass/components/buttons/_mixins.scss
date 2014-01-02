@@ -44,7 +44,8 @@
 //
 // Used to add color styles
 //
-
+// $bg - background color of the button. Default: $primary-color
+// $disabled - when true, it will add additional styling when in disabled state. Default: false
 @mixin button-style($bg: $primary-color, $disabled: false) {
   background-color: $bg;
   color: $button-font-color;

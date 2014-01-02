@@ -1,0 +1,20 @@
+// Form mixins
+// -----------------------------------------------------------------------
+
+// Creates a row inside the form
+@mixin form-row-base {
+  .row {
+    // TODO: Clean up the margin styling for a row
+    margin: 0 0; //((-$form-spacing) / 2);
+
+    .column{
+      display: inline-block;
+      padding: 0 $form-spacing / 2;
+    }
+
+    input.column,
+    textarea.column {
+      padding-left: $form-spacing / 2;
+    }
+  }
+}
