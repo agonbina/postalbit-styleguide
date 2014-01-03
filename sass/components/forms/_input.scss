@@ -1,3 +1,4 @@
+// Import the input mixins
 @import "input/mixins";
 
 // Error messages for input and labels
@@ -9,12 +10,6 @@ $input-error-message-font-style: bold !default;
 $input-error-message-font-color: #fff !default;
 $input-error-message-font-color-alt: #333 !default;
 
-// Import the input mixins
-@import "input/mixins";
-
-%input {
-
-}
 
 /* We use this to get basic styling on all basic form elements */
 input[type="text"],

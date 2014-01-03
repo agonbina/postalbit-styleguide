@@ -6,14 +6,22 @@
     <script src="//use.edgefonts.net/source-sans-pro:n3,n4,n6,n7.js"></script>
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
+    <style>
+        .block {
+            width: 90%; margin: 0 auto;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body style="background: #ECE9E3">
 
-<div style="width: 90%; margin: 0 auto;">
-    <h1>Presenting dem forms</h1>
+<div class="block">
+    <h1>Form elements</h1>
 
 
-    <form action="" style="padding: 5%">
+    <form action="" >
         <div class="row">
             <input type="email" placeholder="E-mail"/>
             <input type="password" placeholder="Password"/>
@@ -23,14 +31,13 @@
             <button class="button" type="submit">Submit</button>
         </div>
     </form>
-    <div>
-        more text
-    </div>
 </div>
 
+<div class="block">
 
-<div style="display: none">
-    <h1>Presenting dem buttons </h1>
+    <hr/>
+
+    <h1>Buttons</h1>
     <div>
         <a href="#" class="small button">SAVE</a>
         <a href="#" class="secondary small button">Enter the Future</a>
