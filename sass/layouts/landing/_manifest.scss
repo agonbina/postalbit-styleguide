@@ -1,0 +1,45 @@
+//
+//Global variables to the landing page
+//
+$header-bg-color: $primary-color !default;
+$header-height: 100% !default;
+
+$header-bg-image-url: "junk-mail.jpeg" !default;
+
+// Susy settings for responsive grids
+$total-columns  : 12 !default;
+$column-width   : 5em !default;
+$gutter-width   : 1em !default;
+$grid-padding   : $gutter-width !default;
+
+//
+// Landing Page mixins, placehoders, modules and UI components
+//
+@import "header";
+
+.page {
+  @include container;
+  @include susy-grid-background;
+}
+
+header {
+  @include header-base;
+
+  .container {
+    @include container;
+    //@include susy-grid-background;
+
+    text-align: center;
+
+    h1 { @include adjust-font-size-to($h1-font-size * 1.5); }
+    h1.title:after {
+      content: 'PostalBit';
+      border-bottom: 1px white solid;
+    }
+    h1, h2 {
+      color: #ffffff;
+    }
+
+  }
+}
+
