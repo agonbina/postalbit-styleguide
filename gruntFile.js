@@ -8,6 +8,7 @@ module.exports = function (grunt) {
                     require: 'susy',
                     sassDir: 'sass',
                     cssDir: 'css',
+                    imagesDir: "images",
                     environment: 'development'
                 }
             }
@@ -16,12 +17,32 @@ module.exports = function (grunt) {
         watch: {
             source: {
                 files: ['sass/**/*.scss'],
-                tasks: ['clean', 'compass']
+                tasks: ['compass']
             },
             styles: {
                 files: ['css/*.css'],
                 options: {
                     livereload: true
+                }
+            }
+        },
+
+        browser_sync: {
+            dev: {
+                bsFiles: {
+                    src: ['css/styles.css', 'landing.html']
+                },
+                options: {
+                    server: {
+                        baseDir: '.',
+                        ghostMode: {
+                            clicks: true,
+                            scroll: true,
+                            links: true,
+                            forms: true
+                        }
+                    },
+                    watchTask: true
                 }
             }
         },
@@ -34,10 +55,11 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-clean');
+    //grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-browser-sync');
 
     // Default task(s)
-    grunt.registerTask('default', ['watch:source']);
+    grunt.registerTask('default', ['browser_sync', 'watch:source']);
 
 };

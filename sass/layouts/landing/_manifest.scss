@@ -25,21 +25,24 @@ $grid-padding   : $gutter-width !default;
 header {
   @include header-base;
 
+  h1, h2 {
+    color: $white;
+  }
   .container {
     @include container;
     //@include susy-grid-background;
 
     text-align: center;
 
-    h1 { @include adjust-font-size-to($h1-font-size * 1.5); }
-    h1.title:after {
-      content: 'PostalBit';
-      border-bottom: 1px white solid;
-    }
-    h1, h2 {
-      color: #ffffff;
-    }
+    h1 {
+      @include adjust-font-size-to($h1-font-size * 1.5);
 
+      &.important { @include adjust-font-size-to($h1-font-size * 2); }
+      &.title:after {
+        content: 'PostalBit';
+        border-bottom: 1px whitesmoke solid;
+      }
+    }
   }
 }
 
