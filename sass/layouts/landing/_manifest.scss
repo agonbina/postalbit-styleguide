@@ -25,6 +25,8 @@ $grid-padding   : $gutter-width !default;
 header {
   @include header-base;
 
+  position: relative;
+
   h1, h2 {
     color: $white;
   }
@@ -32,6 +34,7 @@ header {
     @include container;
     //@include susy-grid-background;
 
+    position: relative;
     text-align: center;
 
     h1 {

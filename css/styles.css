@@ -949,11 +949,12 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 100%; }
-  /* line 28, ../sass/layouts/landing/_manifest.scss */
+  height: 100%;
+  position: relative; }
+  /* line 30, ../sass/layouts/landing/_manifest.scss */
   header h1, header h2 {
     color: white; }
-  /* line 31, ../sass/layouts/landing/_manifest.scss */
+  /* line 33, ../sass/layouts/landing/_manifest.scss */
   header .container {
     *zoom: 1;
     max-width: 59em;
@@ -962,21 +963,22 @@ header {
     padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
     text-align: center; }
     /* line 38, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
     header .container:after {
       content: "";
       display: table;
       clear: both; }
-    /* line 37, ../sass/layouts/landing/_manifest.scss */
+    /* line 40, ../sass/layouts/landing/_manifest.scss */
     header .container h1 {
       font-size: 4.5em;
       line-height: 1.33333em; }
-      /* line 40, ../sass/layouts/landing/_manifest.scss */
+      /* line 43, ../sass/layouts/landing/_manifest.scss */
       header .container h1.important {
         font-size: 6em;
         line-height: 1.25em; }
-      /* line 41, ../sass/layouts/landing/_manifest.scss */
+      /* line 44, ../sass/layouts/landing/_manifest.scss */
       header .container h1.title:after {
         content: 'PostalBit';
         border-bottom: 1px whitesmoke solid; }
