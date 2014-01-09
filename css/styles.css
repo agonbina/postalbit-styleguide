@@ -913,11 +913,11 @@ form {
 /* line 22, ../sass/layouts/landing/_manifest.scss */
 header {
   height: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(67, 137, 194, 0.7)), color-stop(100%, rgba(67, 137, 194, 0.7))), url('/images/junk-mail.jpeg?1388803802');
-  background-image: -webkit-linear-gradient(top, rgba(67, 137, 194, 0.7), rgba(67, 137, 194, 0.7)), url('/images/junk-mail.jpeg?1388803802');
-  background-image: -moz-linear-gradient(top, rgba(67, 137, 194, 0.7), rgba(67, 137, 194, 0.7)), url('/images/junk-mail.jpeg?1388803802');
-  background-image: -o-linear-gradient(top, rgba(67, 137, 194, 0.7), rgba(67, 137, 194, 0.7)), url('/images/junk-mail.jpeg?1388803802');
-  background-image: linear-gradient(top, rgba(67, 137, 194, 0.7), rgba(67, 137, 194, 0.7)), url('/images/junk-mail.jpeg?1388803802');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(67, 137, 194, 0.7)), color-stop(100%, rgba(67, 137, 194, 0.7))), url('/images/junk-mail.jpeg?1389240603');
+  background-image: -webkit-linear-gradient(top, rgba(67, 137, 194, 0.7), rgba(67, 137, 194, 0.7)), url('/images/junk-mail.jpeg?1389240603');
+  background-image: -moz-linear-gradient(top, rgba(67, 137, 194, 0.7), rgba(67, 137, 194, 0.7)), url('/images/junk-mail.jpeg?1389240603');
+  background-image: -o-linear-gradient(top, rgba(67, 137, 194, 0.7), rgba(67, 137, 194, 0.7)), url('/images/junk-mail.jpeg?1389240603');
+  background-image: linear-gradient(top, rgba(67, 137, 194, 0.7), rgba(67, 137, 194, 0.7)), url('/images/junk-mail.jpeg?1389240603');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; }
