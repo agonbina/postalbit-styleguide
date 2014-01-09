@@ -1,3 +1,41 @@
 // Custom mixins used throughout the landing page components
 // -----------------------------------------------------------------------
 
+//
+// A base slide style
+//
+// $height - Height of a slide. Default: $header-height || 100% i.e. span the content
+
+@mixin slide-base($height: $header-height) {
+  height: $header-height;
+}
+
+//
+// Add styling to a slide
+//
+// $background-color - Color of the background. Default: $white || #fff
+// $text-color - Color of the text. Default: $black
+
+@mixin slide-style($background-color: $white, $text-color: $black) {
+  background-color: $background-color;
+  color: $text-color;
+}
+
+//
+// Add a background image with gradient overlay
+//
+// $image-url - Background image for the header. Default: $header-bg-image-url || "junk-mail.jpeg"
+// $gradient-color - Color to be scaled for the background linear gradient: Default: $dark-blue
+
+@mixin slide-background-image($bg-image-url: $header-bg-image-url, $gradient-color: $dark-blue) {
+  $gradient-color: rgba($gradient-color, .7);
+
+  @include background-image(
+      linear-gradient(top, $gradient-color, $gradient-color),
+      image-url($bg-image-url)
+  );
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}

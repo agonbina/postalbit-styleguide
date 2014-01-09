@@ -6,6 +6,8 @@ $header-height: 100% !default;
 
 $header-bg-image-url: "junk-mail.jpeg" !default;
 
+$slide-height: $header-height !default;
+
 // Susy settings for responsive grids
 $total-columns  : 12 !default;
 $column-width   : 5em !default;
@@ -15,26 +17,18 @@ $grid-padding   : $gutter-width !default;
 //
 // Landing Page mixins, placehoders, modules and UI components
 //
-@import "header";
-
-.page {
-  @include container;
-  @include susy-grid-background;
-}
+@import "mixins";
 
 header {
-  @include header-base;
-
-  position: relative;
+  @include slide-base;
+  @include slide-background-image;
 
   h1, h2 {
     color: $white;
   }
   .container {
     @include container;
-    //@include susy-grid-background;
 
-    position: relative;
     text-align: center;
 
     h1 {
@@ -46,6 +40,33 @@ header {
         border-bottom: 1px whitesmoke solid;
       }
     }
+  }
+}
+
+.slide {
+  @include slide-base;
+  @include slide-style;
+
+  text-align: center;
+
+  .container { @include container; }
+
+  &.orange { @include slide-style($background-color: $secondary-color); }
+  &.dark { @include slide-style($background-color: lighten($black, 10%), $text-color: $white); }
+
+  // Content specific styles
+  &.first {
+    .clock { @include span-columns(4, 12); }
+    .direct-mail-fact { @include span-columns(8 omega, 12); }
+  }
+  &.second {
+    .text { @include span-columns(6, 12); }
+    .laptop { @include span-columns(6 omega, 12); }
+  }
+  &.third {
+    h2, h3 { color: $white; }
+    .phone { @include span-columns(4, 12); }
+    .text { @include span-columns(8 omega, 12); }
   }
 }
 
