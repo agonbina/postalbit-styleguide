@@ -408,7 +408,7 @@ body {
   color: #222222;
   padding: 0;
   margin: 0;
-  font-family: source-sans-pro, Helvetica, Arial, sans-serif;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 24px;
@@ -571,7 +571,7 @@ h1.important, h2.important, h3.important, h4.important, h5.important, h6.importa
 /* Default header styles */
 /* line 99, ../sass/typography/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: source-sans-pro, Helvetica, Arial, sans-serif;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
   color: #222222; }
@@ -660,7 +660,7 @@ dl {
 button, .button {
   border: 0 none white;
   cursor: pointer;
-  font-family: source-sans-pro, Helvetica, Arial, sans-serif;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-weight: bold;
   line-height: normal;
   margin: 0 0 1.25em;
@@ -857,7 +857,7 @@ textarea {
   input[type="time"]:hover,
   input[type="url"]:hover,
   textarea:hover {
-    border-color: #b8ad97;
+    border-color: #ece9e3;
     border-width: 2px; }
   /* line 33, ../sass/components/forms/input/_mixins.scss */
   input[type="text"][disabled],
@@ -980,45 +980,57 @@ header {
   .slide.dark {
     background-color: #1a1a1a;
     color: white; }
-  /* line 59, ../sass/layouts/landing/_manifest.scss */
+  /* line 56, ../sass/layouts/landing/_manifest.scss */
+  .slide.brown {
+    background-color: #ece9e3;
+    color: black; }
+  /* line 60, ../sass/layouts/landing/_manifest.scss */
+  .slide.first h3 {
+    line-height: 1.2em; }
+  /* line 61, ../sass/layouts/landing/_manifest.scss */
   .slide.first .clock {
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%;
     display: inline; }
-  /* line 60, ../sass/layouts/landing/_manifest.scss */
+  /* line 62, ../sass/layouts/landing/_manifest.scss */
   .slide.first .direct-mail-fact {
     width: 66.10169%;
     float: right;
     margin-right: 0;
     *margin-left: -1em;
     display: inline; }
-  /* line 63, ../sass/layouts/landing/_manifest.scss */
+  /* line 65, ../sass/layouts/landing/_manifest.scss */
   .slide.second .text {
     width: 49.15254%;
     float: left;
     margin-right: 1.69492%;
     display: inline; }
-  /* line 64, ../sass/layouts/landing/_manifest.scss */
+  /* line 66, ../sass/layouts/landing/_manifest.scss */
   .slide.second .laptop {
     width: 49.15254%;
     float: right;
     margin-right: 0;
     *margin-left: -1em;
     display: inline; }
-  /* line 67, ../sass/layouts/landing/_manifest.scss */
+  /* line 69, ../sass/layouts/landing/_manifest.scss */
   .slide.third h2, .slide.third h3 {
     color: white; }
-  /* line 68, ../sass/layouts/landing/_manifest.scss */
+  /* line 70, ../sass/layouts/landing/_manifest.scss */
   .slide.third .phone {
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%;
-    display: inline; }
-  /* line 69, ../sass/layouts/landing/_manifest.scss */
+    display: inline;
+    margin-top: 4.5em; }
+  /* line 74, ../sass/layouts/landing/_manifest.scss */
   .slide.third .text {
     width: 66.10169%;
     float: right;
     margin-right: 0;
     *margin-left: -1em;
     display: inline; }
+  /* line 76, ../sass/layouts/landing/_manifest.scss */
+  .slide.fourth {
+    padding-top: 3em;
+    padding-bottom: 3em; }

@@ -53,9 +53,11 @@ header {
 
   &.orange { @include slide-style($background-color: $secondary-color); }
   &.dark { @include slide-style($background-color: lighten($black, 10%), $text-color: $white); }
+  &.brown { @include slide-style($background-color: $dark-brown); }
 
   // Content specific styles
   &.first {
+    h3 { @include adjust-leading-to(0.8); }
     .clock { @include span-columns(4, 12); }
     .direct-mail-fact { @include span-columns(8 omega, 12); }
   }
@@ -65,8 +67,15 @@ header {
   }
   &.third {
     h2, h3 { color: $white; }
-    .phone { @include span-columns(4, 12); }
+    .phone {
+      @include span-columns(4, 12);
+      @include leader(3);
+    }
     .text { @include span-columns(8 omega, 12); }
+  }
+  &.fourth {
+    @include padding-leader(2);
+    @include padding-trailer(2);
   }
 }
 
