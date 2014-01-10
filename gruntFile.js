@@ -5,7 +5,7 @@ module.exports = function (grunt) {
         compass: {
             dist: {
                 options: {
-                    require: 'susy',
+                    require: ['susy'],
                     sassDir: 'sass',
                     cssDir: 'css',
                     imagesDir: "images",
