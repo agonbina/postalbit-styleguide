@@ -920,11 +920,13 @@ header {
   background-image: linear-gradient(top, rgba(67, 137, 194, 0.7), rgba(67, 137, 194, 0.7)), url('/images/junk-mail.jpeg?1388885145');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center; }
-  /* line 26, ../sass/layouts/landing/_manifest.scss */
+  background-position: center center;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em; }
+  /* line 30, ../sass/layouts/landing/_manifest.scss */
   header h1, header h2 {
     color: white; }
-  /* line 27, ../sass/layouts/landing/_manifest.scss */
+  /* line 31, ../sass/layouts/landing/_manifest.scss */
   header .container {
     *zoom: 1;
     max-width: 59em;
@@ -939,26 +941,26 @@ header {
       content: "";
       display: table;
       clear: both; }
-    /* line 32, ../sass/layouts/landing/_manifest.scss */
+    /* line 36, ../sass/layouts/landing/_manifest.scss */
     header .container h1 {
       font-size: 4.5em;
       line-height: 1.33333em; }
-      /* line 35, ../sass/layouts/landing/_manifest.scss */
+      /* line 39, ../sass/layouts/landing/_manifest.scss */
       header .container h1.important {
         font-size: 6em;
         line-height: 1.25em; }
-      /* line 36, ../sass/layouts/landing/_manifest.scss */
+      /* line 40, ../sass/layouts/landing/_manifest.scss */
       header .container h1.title:after {
         content: 'PostalBit';
         border-bottom: 1px whitesmoke solid; }
 
-/* line 44, ../sass/layouts/landing/_manifest.scss */
+/* line 48, ../sass/layouts/landing/_manifest.scss */
 .slide {
   height: 100%;
   background-color: white;
   color: black;
   text-align: center; }
-  /* line 50, ../sass/layouts/landing/_manifest.scss */
+  /* line 54, ../sass/layouts/landing/_manifest.scss */
   .slide .container {
     *zoom: 1;
     max-width: 59em;
@@ -972,65 +974,65 @@ header {
       content: "";
       display: table;
       clear: both; }
-  /* line 52, ../sass/layouts/landing/_manifest.scss */
+  /* line 56, ../sass/layouts/landing/_manifest.scss */
   .slide.orange {
     background-color: #ffa80d;
     color: black; }
-  /* line 53, ../sass/layouts/landing/_manifest.scss */
+  /* line 57, ../sass/layouts/landing/_manifest.scss */
   .slide.dark {
     background-color: #1a1a1a;
     color: white; }
-  /* line 54, ../sass/layouts/landing/_manifest.scss */
+  /* line 58, ../sass/layouts/landing/_manifest.scss */
   .slide.brown {
     background-color: #ece9e3;
     color: black; }
-  /* line 58, ../sass/layouts/landing/_manifest.scss */
+  /* line 62, ../sass/layouts/landing/_manifest.scss */
   .slide.first h3 {
     line-height: 1.2em; }
-  /* line 59, ../sass/layouts/landing/_manifest.scss */
+  /* line 63, ../sass/layouts/landing/_manifest.scss */
   .slide.first .clock {
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%;
     display: inline; }
-  /* line 60, ../sass/layouts/landing/_manifest.scss */
+  /* line 64, ../sass/layouts/landing/_manifest.scss */
   .slide.first .direct-mail-fact {
     width: 66.10169%;
     float: right;
     margin-right: 0;
     *margin-left: -1em;
     display: inline; }
-  /* line 63, ../sass/layouts/landing/_manifest.scss */
+  /* line 67, ../sass/layouts/landing/_manifest.scss */
   .slide.second .text {
     width: 49.15254%;
     float: left;
     margin-right: 1.69492%;
     display: inline; }
-  /* line 64, ../sass/layouts/landing/_manifest.scss */
+  /* line 68, ../sass/layouts/landing/_manifest.scss */
   .slide.second .laptop {
     width: 49.15254%;
     float: right;
     margin-right: 0;
     *margin-left: -1em;
     display: inline; }
-  /* line 67, ../sass/layouts/landing/_manifest.scss */
+  /* line 71, ../sass/layouts/landing/_manifest.scss */
   .slide.third h2, .slide.third h3 {
     color: white; }
-  /* line 68, ../sass/layouts/landing/_manifest.scss */
+  /* line 72, ../sass/layouts/landing/_manifest.scss */
   .slide.third .phone {
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%;
     display: inline;
     padding-top: 1.5em; }
-  /* line 72, ../sass/layouts/landing/_manifest.scss */
+  /* line 76, ../sass/layouts/landing/_manifest.scss */
   .slide.third .text {
     width: 66.10169%;
     float: right;
     margin-right: 0;
     *margin-left: -1em;
     display: inline; }
-  /* line 74, ../sass/layouts/landing/_manifest.scss */
-  .slide.fourth {
+  /* line 79, ../sass/layouts/landing/_manifest.scss */
+  .slide.fourth .h2 {
     padding-top: 1.5em;
     padding-bottom: 1.5em; }

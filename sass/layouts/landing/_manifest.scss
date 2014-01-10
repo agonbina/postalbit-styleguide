@@ -23,6 +23,10 @@ header {
   @include slide-base;
   @include slide-background-image;
 
+  // Add some padding at the top and bottom
+  @include padding-leader(1);
+  @include padding-trailer(1);
+
   h1, h2 { color: $white; }
   .container {
     @include container;
@@ -72,8 +76,10 @@ header {
     .text { @include span-columns(8 omega, 12); }
   }
   &.fourth {
-    @include padding-leader;
-    @include padding-trailer;
+    .h2 {
+      @include padding-leader; @include padding-trailer;
+    }
+
   }
 }
 
