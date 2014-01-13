@@ -1,6 +1,5 @@
 // Core libraries
 // ------------------------------------------------------------------------------
-//@import "compass/compass";
 @import "compass";
 //@import "bourbon/bourbon";
 @import "susy";
@@ -16,6 +15,7 @@
 // Base
 // ------------------------------------------------------------------------------
 @import "typography/typography";
+@import "typography/font-awesome";
 
 // Components ( UI Elements )
 // ------------------------------------------------------------------------------

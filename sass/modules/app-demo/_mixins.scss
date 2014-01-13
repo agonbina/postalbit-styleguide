@@ -1,3 +1,30 @@
 // Global mixins to the app-demo module
 // -----------------------------------------------------------------------
 
+//
+// Base style for frame of a device
+//
+// @content - includes any extra styling needed for a customized frame
+
+@mixin frame-base {
+  @include border-radius($frame-border-radius);
+  @include single-box-shadow($frame-shadow);
+  @content;
+
+  padding: $frame-padding-top-bottom $frame-padding-left-right;
+  background-color: $frame-bg-color;
+
+  // Center the rectangles inside the frame
+  text-align: center;
+}
+
+//
+// Base style for screen of a device
+
+@mixin screen-base {
+  @include single-box-shadow($screen-shadow);
+  @content;
+
+  background-color: $screen-bg-color;
+}
+

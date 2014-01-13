@@ -1,0 +1,26 @@
+// FontAwesome settings, mixins and helpers
+// -----------------------------------------------------------------------
+
+
+@include font-face('FontAwesome',
+  font-files( 'fontawesome-webfont.woff', woff,
+              'fontawesome-webfont.ttf', ttf,
+              'fontawesome-webfont.svg', svg),
+              'fontawesome-webfont.eot', normal, normal );
+
+// Unicodes for FontAwesome icons
+$fa-clock: '\f0c9';
+$fa-plus: '\f067';
+
+
+$icons-list:
+  bars $fa-clock,
+  plus $fa-plus;
+
+// Generate a placeholder for each icon pair
+@each $icon in $icons-list {
+  %#{nth($icon, 1)}-icon {
+    content: nth($icon, 2);
+    font-family: FontAwesome;
+  }
+}

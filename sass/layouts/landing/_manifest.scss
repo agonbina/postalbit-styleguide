@@ -2,9 +2,8 @@
 //Global variables to the landing page
 //
 $header-bg-color: $primary-color !default;
-$header-height: 100% !default;
-
 $header-bg-image-url: "junk-mail.jpeg" !default;
+$header-height: 100% !default;
 
 $slide-height: $header-height !default;
 
@@ -14,33 +13,39 @@ $column-width   : 5em !default;
 $gutter-width   : 1em !default;
 $grid-padding   : $gutter-width !default;
 
+$border-box-sizing  : true;
+
+// Media Query Breakpoints
+//
+// Use this format ${class-name}-breakpoint: $media-layout
+//    - class-name - name of the class because of which the breakpoint is activated
+//    - $media-layout - see Susy docs for Media-Layouts
+$phone-breakpoint: 6 em-calc(420px);
+
+
 //
 // Landing Page mixins, placehoders, modules and UI components
 //
 @import "mixins";
 
-header {
+body header {
   @include slide-base;
   @include slide-background-image;
 
   // Add some padding at the top and bottom
-  @include padding-leader(1);
-  @include padding-trailer(1);
+  @extend %important-padding;
+
+  text-align: center;
+  background-attachment: fixed;
 
   h1, h2 { color: $white; }
-  .container {
-    @include container;
+  h1 {
+    @include adjust-font-size-to($h1-font-size * 1.5);
 
-    text-align: center;
-
-    h1 {
-      @include adjust-font-size-to($h1-font-size * 1.5);
-
-      &.important { @include adjust-font-size-to($h1-font-size * 2); }
-      &.title:after {
-        content: 'PostalBit';
-        border-bottom: 1px whitesmoke solid;
-      }
+    &.important { @include adjust-font-size-to($h1-font-size * 2); }
+    &.title:after {
+      content: 'PostalBit';
+      border-bottom: 1px whitesmoke solid;
     }
   }
 }
@@ -64,22 +69,44 @@ header {
     .direct-mail-fact { @include span-columns(8 omega, 12); }
   }
   &.second {
-    .text { @include span-columns(6, 12); }
-    .laptop { @include span-columns(6 omega, 12); }
+    .text {
+      @include span-columns(6, 12);
+      @include at-breakpoint($phone-breakpoint) {
+        @include span-columns(6 omega);
+        background-color: red;
+      }
+    }
+    .laptop {
+      @include span-columns(6 omega, 12);
+      @include at-breakpoint($phone-breakpoint) {
+        @include span-columns(6 omega);
+        background-color: blue;
+      }
+    }
   }
   &.third {
     h2, h3 { color: $white; }
     .phone {
       @include span-columns(4, 12);
       @include padding-leader;
+      @include at-breakpoint($phone-breakpoint) {
+        @include span-columns(6 omega);
+        background-color: red;
+      }
     }
-    .text { @include span-columns(8 omega, 12); }
+    .text {
+      @include span-columns(8 omega, 12);
+      @include at-breakpoint($phone-breakpoint) {
+        @include span-columns(6 omega);
+        background-color: blue;
+      }
+    }
   }
   &.fourth {
-    .h2 {
-      @include padding-leader; @include padding-trailer;
-    }
-
+    @include padding-trailer;
   }
 }
 
+@include at-breakpoint($phone-breakpoint) {
+  html, body { font-size: 12px; }
+}

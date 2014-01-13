@@ -3,11 +3,12 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         compass: {
-            dist: {
+            build: {
                 options: {
                     require: ['susy'],
                     sassDir: 'sass',
                     cssDir: 'css',
+                    fontsDir: 'fonts',
                     imagesDir: "images",
                     environment: 'development'
                 }
@@ -17,7 +18,7 @@ module.exports = function (grunt) {
         watch: {
             source: {
                 files: ['sass/**/*.scss'],
-                tasks: ['compass']
+                tasks: ['compass:build']
             },
             styles: {
                 files: ['css/*.css'],
@@ -30,7 +31,7 @@ module.exports = function (grunt) {
         browser_sync: {
             dev: {
                 bsFiles: {
-                    src: ['css/styles.css', 'landing.html']
+                    src: ['css/styles.css', 'landing.html', 'index.html']
                 },
                 options: {
                     server: {

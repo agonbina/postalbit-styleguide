@@ -1,10 +1,91 @@
 //
 // Global variables
 //
+$frame-border-radius: 25px !default;
+$frame-padding-top-bottom: 50px !default;
+$frame-padding-left-right: 5px !default;
+$frame-bg-color: $light-grey !default;
+$frame-shadow: 0 0 0 1px darken($light-grey, 15%) !default;
 
+// Inner rectangles for the frame
+$frame-inner-rectangle-width: 35px !default;
+$frame-inner-rectangle-margin: 20px !default;
+
+$screen-width: em-calc(240px) !default;
+$screen-height: em-calc(300px) !default;
+$screen-margin: 0 auto !default;
+$screen-bg-color: whitesmoke !default;
+$screen-font-color: $white !default;
+$screen-shadow: $frame-shadow !default;
+
+// Screen header
+$screen-header-bg-color: $flat-blue !default;
+$screen-header-height: 40px !default;
+$screen-header-icon-spacing: 3% !default;
 
 //
 // mixins, helpers, etc
 //
 @import "mixins";
 @import "keyframes";
+
+
+.frame {
+  @include frame-base {
+    width: $screen-width;
+    position: relative;
+  };
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    width: $frame-inner-rectangle-width;
+    border: 1px solid $white;
+    background-color: darken($frame-bg-color, 40%);
+  }
+  &:before {
+    @include border-radius($frame-border-radius + 5px);
+
+    height: round($frame-inner-rectangle-width / 3);
+    top: $frame-inner-rectangle-margin;
+  }
+  &:after {
+    @include border-radius(50%);
+
+    height: $frame-inner-rectangle-width;
+    bottom: 0; //$frame-inner-rectangle-margin;
+  }
+}
+
+.screen {
+  @include screen-base{ position: relative; };
+
+  // Styling for the header of the app-demo screen
+  & .header {
+    background-color: $screen-header-bg-color;
+
+    h3 {
+      color: $screen-font-color;
+      text-transform: uppercase;
+      font-weight: bold;
+      &:before {
+        @extend %bars-icon;
+        position: absolute;
+        left: $screen-header-icon-spacing;
+      }
+      &:after {
+        @extend %plus-icon;
+        position: absolute;
+        right: $screen-header-icon-spacing;
+      }
+    }
+  }
+
+  // Styling for the main content of the app-demo screen
+  & main {
+    position: relative;
+    height: $screen-height;
+    overflow: hidden;
+  }
+
+}

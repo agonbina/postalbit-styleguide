@@ -1,6 +1,6 @@
 
 -LANDING PAGE-
-1. Add the animated mobile app demo module
-2. Make the typography responsive
-3. Add an icon-font pack (most likely FontAwesome)
-4. Make everything else responsive with the Susy at-breakpoint mixin
+- Make everything else responsive with the Susy at-breakpoint mixin
+- Add the animated mobile app demo module
++ Make the typography responsive
+- Add an icon-font pack (most likely FontAwesome)

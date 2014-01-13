@@ -48,3 +48,10 @@ $cursor-text-value: text !default;
 .grid {
   @if $debug == true { @extend %background-grid; }
 }
+
+// Center an element vertically
+@mixin vertical-align {
+  position: absolute;
+  margin: auto;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
