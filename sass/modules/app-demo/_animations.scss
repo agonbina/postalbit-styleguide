@@ -1,0 +1,49 @@
+
+// Animation timings
+$message-options-length: 1s;
+$message-options-start: 3s;
+$click-reply-length: .2s;
+$click-reply-start: $message-options-start + $message-options-length + 1s;
+$reply-box-length: 1s;
+$reply-box-start: $click-reply-start + $click-reply-length + .1s;
+$send-message-length: .2s;
+$send-message-start: $reply-box-start + $reply-box-length + 1s;
+$confirm-overlay-length: .5s;
+$confirm-overlay-start: $send-message-start + $send-message-length + .1s;
+
+
+//
+//Keyframe declarations for all animations used in the phone app demo
+
+@include keyframes(slidein) { 100%  { margin-left: 0%; } }
+@include keyframes(slideup) {
+  50%,
+  70%   { opacity: .7; bottom: 5%; }
+  100%  { opacity: 1; bottom: 0; }
+}
+@include keyframes(click) { 100% { background: darken($flat-green, 20%); } }
+@include keyframes(click-send) { 100% { background: darken($flat-red, 20%); } }
+
+
+//
+//Animation placeholders for phone UI elements
+
+$message-options-animation: slidein $message-options-length $message-options-start ease-in-out forwards;
+$click-reply-animation: click $click-reply-length $click-reply-start;
+
+
+$animations:
+  message-options $message-options-animation,
+  click-reply $click-reply-animation;
+
+// Generate placeholders for each animation in the list above
+@each $animation in $animations {
+  $animation-class: nth($animation, 1);
+  $animation-rule: nth($animation, 2);
+
+  %animate-#{$animation-class} {
+    @include animation($animation-rule);
+  }
+}
+
+

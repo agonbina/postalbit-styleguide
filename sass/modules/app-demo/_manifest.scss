@@ -11,23 +11,28 @@ $frame-shadow: 0 0 0 1px darken($light-grey, 15%) !default;
 $frame-inner-rectangle-width: 35px !default;
 $frame-inner-rectangle-margin: 20px !default;
 
-$screen-width: em-calc(240px) !default;
+$screen-width: em-calc(260px) !default;
 $screen-height: em-calc(300px) !default;
 $screen-margin: 0 auto !default;
 $screen-bg-color: whitesmoke !default;
 $screen-font-color: $white !default;
 $screen-shadow: $frame-shadow !default;
+$screen-elements-padding: 3% !default;
 
 // Screen header
 $screen-header-bg-color: $flat-blue !default;
-$screen-header-height: 40px !default;
+$screen-header-height: em-calc(40px) !default;
 $screen-header-icon-spacing: 3% !default;
+
+// Screen main
+$screen-article-height: 20% !default;
+$screen-article-border-bottom: $light-grey 2px solid !default;
 
 //
 // mixins, helpers, etc
 //
 @import "mixins";
-@import "keyframes";
+@import "animations";
 
 
 .frame {
@@ -80,12 +85,102 @@ $screen-header-icon-spacing: 3% !default;
       }
     }
   }
+}
 
-  // Styling for the main content of the app-demo screen
-  & main {
+// Styling for the main content of the app-demo screen
+main.content {
+  position: relative;
+  height: $screen-height;
+  overflow: hidden;
+
+  article {
     position: relative;
-    height: $screen-height;
-    overflow: hidden;
-  }
+    width: 100%;
+    height: $screen-article-height;
+    padding: $screen-elements-padding;
+    border-bottom: $screen-article-border-bottom;
 
+    img { @include border-radius(50%); height: 100%; }
+    .details {
+      position: relative;
+      float: right;
+      width: 79%;
+      margin-left: 1%;
+      text-align: left;
+      h5 { font-weight: bold; }
+    }
+
+    &.options {
+      @extend %animate-message-options;
+
+      position: absolute;
+      margin-left: -100%;
+      padding: 0;
+      border: none;
+      z-index: 1;
+
+      span {
+        position: relative;
+        float: left;
+        width: 30%;
+        height: 100%;
+        color: white;
+
+        &:after {
+          font-size: 1.5em;
+          position: relative;
+          top: 30%;
+        }
+        &:nth-of-type(1) {
+          background-color: $flat-green;
+          &:after { @extend %reply-icon; }
+        }
+        &:nth-of-type(2) {
+          background-color: $flat-red;
+          &:after { @extend %trash-icon; }
+        }
+        &:nth-of-type(3) {
+          background-color: lighten($flat-black, 15%);
+          &:after { @extend %retweet-icon; }
+        }
+        &:nth-of-type(4) {
+          width: 10%;
+          background-color: $flat-black;
+          &:after { @extend %back-arrow-icon; }
+        }
+      }
+    }
+  }
+}
+
+// Secondary screens styling
+section.secondary-screens {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  article {
+    padding: $screen-elements-padding;
+    color: $white;
+    text-align: left;
+
+    &.reply-letter {
+      background-color: lighten($flat-black, 15%);
+      bottom: -100%;
+
+      h6 { color: white;        font-weight: bold;}
+      .textbox {
+        height: 40%;
+        border: 1px solid whitesmoke;
+        margin-top: 5%; padding:
+        $screen-elements-padding / 2;
+      }
+      .button { margin-top: 5%; width: 100%; }
+    }
+
+    &.letter-sent {
+      bottom: 0;
+      background-color: rgba($flat-green, .95);
+    }
+  }
 }

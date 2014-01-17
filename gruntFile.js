@@ -5,12 +5,13 @@ module.exports = function (grunt) {
         compass: {
             build: {
                 options: {
-                    require: ['susy'],
+                    require: ['susy', 'animation'],
                     sassDir: 'sass',
                     cssDir: 'css',
                     fontsDir: 'fonts',
                     imagesDir: "images",
-                    environment: 'development'
+                    environment: 'development',
+                    //outputStyle: 'compressed'
                 }
             }
         },

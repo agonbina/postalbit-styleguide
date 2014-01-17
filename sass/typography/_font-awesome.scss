@@ -11,11 +11,22 @@
 // Unicodes for FontAwesome icons
 $fa-clock: '\f0c9';
 $fa-plus: '\f067';
+$fa-reply: '\f112';
+$fa-trash: '\f014';
+$fa-circle: '\f10c';
+$fa-back-arrow: '\f104';
+$fa-retweet: '\f079';
 
 
 $icons-list:
   bars $fa-clock,
-  plus $fa-plus;
+  plus $fa-plus,
+  reply $fa-reply,
+  trash $fa-trash,
+  circle $fa-circle,
+  back-arrow $fa-back-arrow,
+  retweet $fa-retweet;
+
 
 // Generate a placeholder for each icon pair
 @each $icon in $icons-list {
