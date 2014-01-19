@@ -744,37 +744,43 @@ dl {
   font-style: normal;
 }
 
-/* line 33, ../sass/typography/_font-awesome.scss */
+/* line 37, ../sass/typography/_font-awesome.scss */
 .screen .header h3:before {
   content: "\f0c9";
   font-family: FontAwesome;
 }
 
-/* line 33, ../sass/typography/_font-awesome.scss */
+/* line 37, ../sass/typography/_font-awesome.scss */
 .screen .header h3:after {
   content: "\f067";
   font-family: FontAwesome;
 }
 
-/* line 33, ../sass/typography/_font-awesome.scss */
+/* line 37, ../sass/typography/_font-awesome.scss */
 main.content article.options span:nth-of-type(1):after {
   content: "\f112";
   font-family: FontAwesome;
 }
 
-/* line 33, ../sass/typography/_font-awesome.scss */
+/* line 37, ../sass/typography/_font-awesome.scss */
 main.content article.options span:nth-of-type(2):after {
   content: "\f014";
   font-family: FontAwesome;
 }
 
-/* line 33, ../sass/typography/_font-awesome.scss */
+/* line 37, ../sass/typography/_font-awesome.scss */
+section.secondary-screens article.letter-sent h1:before {
+  content: "\f058";
+  font-family: FontAwesome;
+}
+
+/* line 37, ../sass/typography/_font-awesome.scss */
 main.content article.options span:nth-of-type(4):after {
   content: "\f104";
   font-family: FontAwesome;
 }
 
-/* line 33, ../sass/typography/_font-awesome.scss */
+/* line 37, ../sass/typography/_font-awesome.scss */
 main.content article.options span:nth-of-type(3):after {
   content: "\f079";
   font-family: FontAwesome;
@@ -1214,6 +1220,7 @@ body header h1.title:after {
   margin-right: 1.69492%;
   display: inline;
   padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
 @media (max-width: 26.25em) {
   /* line 89, ../sass/layouts/landing/_manifest.scss */
@@ -1221,10 +1228,9 @@ body header h1.title:after {
     width: 100%;
     float: right;
     margin-right: 0;
-    background-color: red;
   }
 }
-/* line 97, ../sass/layouts/landing/_manifest.scss */
+/* line 95, ../sass/layouts/landing/_manifest.scss */
 .slide.third .text {
   width: 66.10169%;
   float: right;
@@ -1233,7 +1239,7 @@ body header h1.title:after {
   display: inline;
 }
 @media (max-width: 26.25em) {
-  /* line 97, ../sass/layouts/landing/_manifest.scss */
+  /* line 95, ../sass/layouts/landing/_manifest.scss */
   .slide.third .text {
     width: 100%;
     float: right;
@@ -1241,13 +1247,13 @@ body header h1.title:after {
     background-color: blue;
   }
 }
-/* line 105, ../sass/layouts/landing/_manifest.scss */
+/* line 103, ../sass/layouts/landing/_manifest.scss */
 .slide.fourth {
   padding-bottom: 1.5em;
 }
 
 @media (max-width: 26.25em) {
-  /* line 111, ../sass/layouts/landing/_manifest.scss */
+  /* line 109, ../sass/layouts/landing/_manifest.scss */
   html, body {
     font-size: 12px;
   }
@@ -1400,128 +1406,170 @@ body header h1.title:after {
 @-moz-keyframes click-send {
   /* line 25, ../sass/modules/app-demo/_animations.scss */
   100% {
-    background: #a51127;
+    background: #a66a00;
   }
 }
 
 @-webkit-keyframes click-send {
   /* line 25, ../sass/modules/app-demo/_animations.scss */
   100% {
-    background: #a51127;
+    background: #a66a00;
   }
 }
 
 @-o-keyframes click-send {
   /* line 25, ../sass/modules/app-demo/_animations.scss */
   100% {
-    background: #a51127;
+    background: #a66a00;
   }
 }
 
 @-ms-keyframes click-send {
   /* line 25, ../sass/modules/app-demo/_animations.scss */
   100% {
-    background: #a51127;
+    background: #a66a00;
   }
 }
 
 @keyframes click-send {
   /* line 25, ../sass/modules/app-demo/_animations.scss */
   100% {
-    background: #a51127;
+    background: #a66a00;
   }
 }
 
-/* line 44, ../sass/modules/app-demo/_animations.scss */
-main.content article.options {
-  -webkit-animation: slidein 1s 3s ease-in-out forwards;
-  -moz-animation: slidein 1s 3s ease-in-out forwards;
-  -ms-animation: slidein 1s 3s ease-in-out forwards;
-  -o-animation: slidein 1s 3s ease-in-out forwards;
-  animation: slidein 1s 3s ease-in-out forwards;
+/* line 50, ../sass/modules/app-demo/_animations.scss */
+.animate main.content .options {
+  -webkit-animation: slidein 1s 0.1s ease-in-out forwards;
+  -moz-animation: slidein 1s 0.1s ease-in-out forwards;
+  -ms-animation: slidein 1s 0.1s ease-in-out forwards;
+  -o-animation: slidein 1s 0.1s ease-in-out forwards;
+  animation: slidein 1s 0.1s ease-in-out forwards;
 }
 
-/* line 38, ../sass/modules/app-demo/_manifest.scss */
+/* line 50, ../sass/modules/app-demo/_animations.scss */
+.animate main.content .options .reply {
+  -webkit-animation: click 0.2s 2.1s;
+  -moz-animation: click 0.2s 2.1s;
+  -ms-animation: click 0.2s 2.1s;
+  -o-animation: click 0.2s 2.1s;
+  animation: click 0.2s 2.1s;
+}
+
+/* line 50, ../sass/modules/app-demo/_animations.scss */
+.animate section.secondary-screens .reply-letter .button {
+  -webkit-animation: click-send 0.2s 4.4s ease-in-out;
+  -moz-animation: click-send 0.2s 4.4s ease-in-out;
+  -ms-animation: click-send 0.2s 4.4s ease-in-out;
+  -o-animation: click-send 0.2s 4.4s ease-in-out;
+  animation: click-send 0.2s 4.4s ease-in-out;
+}
+
+/* line 50, ../sass/modules/app-demo/_animations.scss */
+.animate section.secondary-screens .reply-letter {
+  -webkit-animation: slideup 1s 2.4s ease-in-out forwards;
+  -moz-animation: slideup 1s 2.4s ease-in-out forwards;
+  -ms-animation: slideup 1s 2.4s ease-in-out forwards;
+  -o-animation: slideup 1s 2.4s ease-in-out forwards;
+  animation: slideup 1s 2.4s ease-in-out forwards;
+}
+
+/* line 50, ../sass/modules/app-demo/_animations.scss */
+.animate section.secondary-screens .letter-sent {
+  -webkit-animation: slideup 0.5s 4.7s ease-in-out forwards;
+  -moz-animation: slideup 0.5s 4.7s ease-in-out forwards;
+  -ms-animation: slideup 0.5s 4.7s ease-in-out forwards;
+  -o-animation: slideup 0.5s 4.7s ease-in-out forwards;
+  animation: slideup 0.5s 4.7s ease-in-out forwards;
+}
+
+/* line 40, ../sass/modules/app-demo/_manifest.scss */
 .frame {
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
-  border-radius: 25px;
+  -webkit-border-radius: 1.5625em;
+  -moz-border-radius: 1.5625em;
+  -ms-border-radius: 1.5625em;
+  -o-border-radius: 1.5625em;
+  border-radius: 1.5625em;
   -webkit-box-shadow: 0px 0px 5px 0 0 0 1px #c5c5c5;
   -moz-box-shadow: 0px 0px 5px 0 0 0 1px #c5c5c5;
   box-shadow: 0px 0px 5px 0 0 0 1px #c5c5c5;
-  width: 16.25em;
+  width: 17.5em;
+  height: 29.375em;
   position: relative;
-  padding: 50px 5px;
+  padding: 3.125em 0.3125em;
   background-color: #ebebeb;
+  margin: 0 auto;
   text-align: center;
 }
-/* line 44, ../sass/modules/app-demo/_manifest.scss */
+/* line 47, ../sass/modules/app-demo/_manifest.scss */
 .frame:before, .frame:after {
   content: '';
   position: absolute;
-  width: 35px;
-  border: 1px solid white;
-  background-color: #858585;
+  left: 45%;
+  width: 3em;
+  background-color: #b8b8b8;
+  text-align: left;
 }
-/* line 51, ../sass/modules/app-demo/_manifest.scss */
+/* line 55, ../sass/modules/app-demo/_manifest.scss */
 .frame:before {
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
-  border-radius: 30px;
-  height: 12px;
-  top: 20px;
+  -webkit-border-radius: 1.5625em;
+  -moz-border-radius: 1.5625em;
+  -ms-border-radius: 1.5625em;
+  -o-border-radius: 1.5625em;
+  border-radius: 1.5625em;
+  height: .7em;
+  top: 4%;
 }
-/* line 57, ../sass/modules/app-demo/_manifest.scss */
+/* line 60, ../sass/modules/app-demo/_manifest.scss */
 .frame:after {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
-  height: 35px;
-  bottom: 0;
+  width: 2.5em;
+  height: 2.5em;
+  bottom: 1.5%;
 }
 
-/* line 65, ../sass/modules/app-demo/_manifest.scss */
+/* line 69, ../sass/modules/app-demo/_manifest.scss */
 .screen {
   -webkit-box-shadow: 0px 0px 5px 0 0 0 1px #c5c5c5;
   -moz-box-shadow: 0px 0px 5px 0 0 0 1px #c5c5c5;
   box-shadow: 0px 0px 5px 0 0 0 1px #c5c5c5;
   position: relative;
+  height: 100%;
   background-color: whitesmoke;
 }
-/* line 69, ../sass/modules/app-demo/_manifest.scss */
+/* line 73, ../sass/modules/app-demo/_manifest.scss */
 .screen .header {
   background-color: #3498db;
+  height: 12%;
 }
-/* line 72, ../sass/modules/app-demo/_manifest.scss */
+/* line 77, ../sass/modules/app-demo/_manifest.scss */
 .screen .header h3 {
   color: white;
   text-transform: uppercase;
   font-weight: bold;
 }
-/* line 76, ../sass/modules/app-demo/_manifest.scss */
+/* line 81, ../sass/modules/app-demo/_manifest.scss */
 .screen .header h3:before {
   position: absolute;
   left: 3%;
 }
-/* line 81, ../sass/modules/app-demo/_manifest.scss */
+/* line 86, ../sass/modules/app-demo/_manifest.scss */
 .screen .header h3:after {
   position: absolute;
   right: 3%;
 }
 
-/* line 91, ../sass/modules/app-demo/_manifest.scss */
+/* line 96, ../sass/modules/app-demo/_manifest.scss */
 main.content {
   position: relative;
-  height: 18.75em;
+  height: 88%;
   overflow: hidden;
 }
-/* line 96, ../sass/modules/app-demo/_manifest.scss */
+/* line 101, ../sass/modules/app-demo/_manifest.scss */
 main.content article {
   position: relative;
   width: 100%;
@@ -1529,7 +1577,7 @@ main.content article {
   padding: 3%;
   border-bottom: #ebebeb 2px solid;
 }
-/* line 103, ../sass/modules/app-demo/_manifest.scss */
+/* line 108, ../sass/modules/app-demo/_manifest.scss */
 main.content article img {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1538,7 +1586,7 @@ main.content article img {
   border-radius: 50%;
   height: 100%;
 }
-/* line 104, ../sass/modules/app-demo/_manifest.scss */
+/* line 109, ../sass/modules/app-demo/_manifest.scss */
 main.content article .details {
   position: relative;
   float: right;
@@ -1546,11 +1594,11 @@ main.content article .details {
   margin-left: 1%;
   text-align: left;
 }
-/* line 110, ../sass/modules/app-demo/_manifest.scss */
+/* line 115, ../sass/modules/app-demo/_manifest.scss */
 main.content article .details h5 {
   font-weight: bold;
 }
-/* line 113, ../sass/modules/app-demo/_manifest.scss */
+/* line 118, ../sass/modules/app-demo/_manifest.scss */
 main.content article.options {
   position: absolute;
   margin-left: -100%;
@@ -1558,7 +1606,7 @@ main.content article.options {
   border: none;
   z-index: 1;
 }
-/* line 122, ../sass/modules/app-demo/_manifest.scss */
+/* line 125, ../sass/modules/app-demo/_manifest.scss */
 main.content article.options span {
   position: relative;
   float: left;
@@ -1566,66 +1614,82 @@ main.content article.options span {
   height: 100%;
   color: white;
 }
-/* line 129, ../sass/modules/app-demo/_manifest.scss */
+/* line 132, ../sass/modules/app-demo/_manifest.scss */
 main.content article.options span:after {
   font-size: 1.5em;
   position: relative;
   top: 30%;
 }
-/* line 134, ../sass/modules/app-demo/_manifest.scss */
+/* line 137, ../sass/modules/app-demo/_manifest.scss */
 main.content article.options span:nth-of-type(1) {
   background-color: #43ccb5;
 }
-/* line 138, ../sass/modules/app-demo/_manifest.scss */
+/* line 141, ../sass/modules/app-demo/_manifest.scss */
 main.content article.options span:nth-of-type(2) {
   background-color: #ea324d;
 }
-/* line 142, ../sass/modules/app-demo/_manifest.scss */
+/* line 145, ../sass/modules/app-demo/_manifest.scss */
 main.content article.options span:nth-of-type(3) {
   background-color: #495065;
 }
-/* line 146, ../sass/modules/app-demo/_manifest.scss */
+/* line 149, ../sass/modules/app-demo/_manifest.scss */
 main.content article.options span:nth-of-type(4) {
   width: 10%;
   background-color: #292d39;
 }
 
-/* line 157, ../sass/modules/app-demo/_manifest.scss */
+/* line 171, ../sass/modules/app-demo/_manifest.scss */
 section.secondary-screens {
   position: absolute;
+  bottom: 0;
   width: 100%;
   height: 100%;
 }
-/* line 162, ../sass/modules/app-demo/_manifest.scss */
+/* line 177, ../sass/modules/app-demo/_manifest.scss */
 section.secondary-screens article {
+  position: absolute;
+  height: 100%;
+  bottom: -100%;
   padding: 3%;
   color: white;
   text-align: left;
 }
-/* line 167, ../sass/modules/app-demo/_manifest.scss */
+/* line 185, ../sass/modules/app-demo/_manifest.scss */
 section.secondary-screens article.reply-letter {
   background-color: #495065;
-  bottom: -100%;
+  z-index: 2;
 }
-/* line 171, ../sass/modules/app-demo/_manifest.scss */
+/* line 189, ../sass/modules/app-demo/_manifest.scss */
 section.secondary-screens article.reply-letter h6 {
   color: white;
   font-weight: bold;
 }
-/* line 172, ../sass/modules/app-demo/_manifest.scss */
+/* line 190, ../sass/modules/app-demo/_manifest.scss */
 section.secondary-screens article.reply-letter .textbox {
   height: 40%;
   border: 1px solid whitesmoke;
   margin-top: 5%;
   padding: 1.5%;
 }
-/* line 178, ../sass/modules/app-demo/_manifest.scss */
+/* line 196, ../sass/modules/app-demo/_manifest.scss */
 section.secondary-screens article.reply-letter .button {
   margin-top: 5%;
   width: 100%;
 }
-/* line 181, ../sass/modules/app-demo/_manifest.scss */
+/* line 199, ../sass/modules/app-demo/_manifest.scss */
 section.secondary-screens article.letter-sent {
-  bottom: 0;
+  z-index: 3;
   background-color: rgba(67, 204, 181, 0.95);
+  text-align: center;
+}
+/* line 203, ../sass/modules/app-demo/_manifest.scss */
+section.secondary-screens article.letter-sent h1 {
+  position: relative;
+  top: 35%;
+  color: white;
+  font-weight: bold;
+}
+/* line 208, ../sass/modules/app-demo/_manifest.scss */
+section.secondary-screens article.letter-sent h1:before {
+  margin-right: 5%;
 }

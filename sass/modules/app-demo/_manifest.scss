@@ -1,9 +1,9 @@
 //
 // Global variables
 //
-$frame-border-radius: 25px !default;
-$frame-padding-top-bottom: 50px !default;
-$frame-padding-left-right: 5px !default;
+$frame-border-radius: em-calc(25px) !default;
+$frame-padding-top-bottom: em-calc(50px) !default;
+$frame-padding-left-right: em-calc(5px) !default;
 $frame-bg-color: $light-grey !default;
 $frame-shadow: 0 0 0 1px darken($light-grey, 15%) !default;
 
@@ -11,8 +11,8 @@ $frame-shadow: 0 0 0 1px darken($light-grey, 15%) !default;
 $frame-inner-rectangle-width: 35px !default;
 $frame-inner-rectangle-margin: 20px !default;
 
-$screen-width: em-calc(260px) !default;
-$screen-height: em-calc(300px) !default;
+$screen-width: em-calc(280px) !default;
+$screen-height: em-calc(470px) !default;
 $screen-margin: 0 auto !default;
 $screen-bg-color: whitesmoke !default;
 $screen-font-color: $white !default;
@@ -21,12 +21,14 @@ $screen-elements-padding: 3% !default;
 
 // Screen header
 $screen-header-bg-color: $flat-blue !default;
-$screen-header-height: em-calc(40px) !default;
+$screen-header-height: 12% !default;
 $screen-header-icon-spacing: 3% !default;
 
 // Screen main
 $screen-article-height: 20% !default;
 $screen-article-border-bottom: $light-grey 2px solid !default;
+
+$animations-on: true !default;
 
 //
 // mixins, helpers, etc
@@ -38,36 +40,39 @@ $screen-article-border-bottom: $light-grey 2px solid !default;
 .frame {
   @include frame-base {
     width: $screen-width;
+    height: $screen-height;
     position: relative;
   };
 
   &:before, &:after {
     content: '';
     position: absolute;
-    width: $frame-inner-rectangle-width;
-    border: 1px solid $white;
-    background-color: darken($frame-bg-color, 40%);
+    left: 45%;
+    width: 3em;
+    background-color: darken($frame-bg-color, 20%);
+    text-align: left;
   }
   &:before {
-    @include border-radius($frame-border-radius + 5px);
-
-    height: round($frame-inner-rectangle-width / 3);
-    top: $frame-inner-rectangle-margin;
+    @include border-radius($frame-border-radius);
+    height: .7em;
+    top: 4%;
   }
   &:after {
     @include border-radius(50%);
-
-    height: $frame-inner-rectangle-width;
-    bottom: 0; //$frame-inner-rectangle-margin;
+    width: 2.5em;
+    height: 2.5em;
+    bottom: 1.5%;
   }
+
 }
 
 .screen {
-  @include screen-base{ position: relative; };
+  @include screen-base{ position: relative; height: 100%; };
 
   // Styling for the header of the app-demo screen
   & .header {
     background-color: $screen-header-bg-color;
+    height: $screen-header-height;
 
     h3 {
       color: $screen-font-color;
@@ -90,7 +95,7 @@ $screen-article-border-bottom: $light-grey 2px solid !default;
 // Styling for the main content of the app-demo screen
 main.content {
   position: relative;
-  height: $screen-height;
+  height: (100% - $screen-header-height);
   overflow: hidden;
 
   article {
@@ -111,8 +116,6 @@ main.content {
     }
 
     &.options {
-      @extend %animate-message-options;
-
       position: absolute;
       margin-left: -100%;
       padding: 0;
@@ -151,22 +154,37 @@ main.content {
       }
     }
   }
+
+  // Animations that will trigger when .animate is present
+  @if $animations-on {
+    .animate & {
+      .options {
+        @extend %animate-message-options;
+
+        & .reply { @extend %animate-click-reply;}
+      }
+    }
+  }
 }
 
 // Secondary screens styling
 section.secondary-screens {
   position: absolute;
+  bottom: 0;
   width: 100%;
   height: 100%;
 
   article {
+    position: absolute;
+    height: 100%;
+    bottom: -100%;
     padding: $screen-elements-padding;
     color: $white;
     text-align: left;
 
     &.reply-letter {
       background-color: lighten($flat-black, 15%);
-      bottom: -100%;
+      z-index: 2;
 
       h6 { color: white;        font-weight: bold;}
       .textbox {
@@ -179,8 +197,27 @@ section.secondary-screens {
     }
 
     &.letter-sent {
-      bottom: 0;
+      z-index: 3;
       background-color: rgba($flat-green, .95);
+      text-align: center;
+      h1 {
+        position: relative;
+        top: 35%;
+        color: $white;
+        font-weight: bold;
+        &:before { @extend %check-circle-icon; margin-right: 5%; }
+      }
+    }
+  }
+
+  // Animations that will trigger when .animate is present
+  @if $animations-on {
+    .animate & {
+      .reply-letter {
+        @extend %animate-reply-box;
+        .button { @extend %animate-click-send; }
+      }
+      .letter-sent { @extend %animate-letter-sent; }
     }
   }
 }

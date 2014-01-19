@@ -89,10 +89,8 @@ body header {
     .phone {
       @include span-columns(4, 12);
       @include padding-leader;
-      @include at-breakpoint($phone-breakpoint) {
-        @include span-columns(6 omega);
-        background-color: red;
-      }
+      @include padding-trailer;
+      @include at-breakpoint($phone-breakpoint) { @include span-columns(6 omega); }
     }
     .text {
       @include span-columns(8 omega, 12);

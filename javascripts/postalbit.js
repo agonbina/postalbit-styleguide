@@ -61,7 +61,6 @@
         var iphone = document.getElementById('iphone');
 
         if(isElementInViewport(iphone)) {
-            console.log('in viewport');
             iphone.className += ' animate';
 
             stopTrackingElement(checkIphoneIsInViewport);
