@@ -1,6 +1,171 @@
 //
 // Global variables
 //
-$frame-border-radius: em-calc(25px) !default;
-$frame-bg-color: $light-grey !default;
-$frame-shadow: 0 0 0 1px darken($light-grey, 15%) !default;
+$desktop-frame-border-radius:       em-calc(15px) !default;
+$desktop-frame-padding-top:         em-calc(30px) !default;
+$desktop-frame-padding-bottom:      em-calc(5px) !default;
+$desktop-frame-padding-left-right:  em-calc(5px) !default;
+$desktop-frame-bg-color:            $light-grey !default;
+$desktop-frame-shadow:              0 0 0 1px darken($light-grey, 15%) !default;
+
+// Desktop screen settings
+$desktop-screen-width:              em-calc(780px) !default;
+$desktop-screen-height:             em-calc(420px) !default;
+$desktop-screen-margin:             0 auto !default;
+$desktop-screen-bg-color:           lighten($flat-black, 15%) !default;
+$desktop-screen-font-color:         $white !default;
+$desktop-screen-shadow:             $frame-shadow !default;
+$desktop-screen-elements-padding:   em-calc(5px) !default;
+$desktop-screen-shadow:             $frame-shadow !default;
+
+$desktop-screen-border-bottom:      $desktop-frame-border-radius !default;
+
+// screen sidebar settings
+$desktop-screen-sidebar-bg-color: $flat-black !default;
+$desktop-screen-sidebar-width:    20% !default;
+$desktop-screen-sidebar-height:   100% !default;
+
+// screen main content settings
+$desktop-screen-main-width:   100% - $desktop-screen-sidebar-width !default;
+$desktop-screen-main-height:  100% !default;
+
+
+
+$desktop-app-animations-on: true !default;
+
+//
+// mixins, helpers, etc
+//
+@import "mixins";
+@import "animations";
+
+
+
+.desktop{
+  .frame {
+    @include desktop-frame-base;
+
+    .options {
+      position: absolute;
+      top: 1%;
+      width: 98%;
+      text-align: left;
+
+      .search-bar {
+        @include border-radius($desktop-frame-border-radius / 2);
+
+        position: absolute;
+        right: 2%;
+        width: 90%;
+        background-color: darken($desktop-frame-bg-color, 15%);
+        display: inline-block;
+        h6 { margin-left: 5%; }
+      }
+    }
+  }
+
+  .screen {
+    @include desktop-screen-base{
+      position: relative; height: 100%; width: 100%;
+    };
+
+    overflow: hidden;
+    color: $white;
+
+    aside, main { display: inline-block; }
+    aside {
+      @include desktop-screen-sidebar-base { position: relative; float: left; };
+
+      padding: $desktop-screen-elements-padding;
+    }
+
+    main {
+      @include desktop-screen-main-base { position: relative; float: left; };
+
+      text-align: left;
+
+      h4 { color: $white;  &:before { @extend %bars-icon; margin-right: em-calc(5px); } }
+      .header {
+        width: 100%;
+        padding: $desktop-screen-elements-padding;
+        background-color: $flat-blue;
+      }
+      .content {
+        position: relative;
+        width: 100%;
+        height: 90%;
+        overflow: hidden;
+
+        .piece {
+          position: absolute;
+          right: -100%;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          padding: $desktop-screen-elements-padding * 2;
+          background-color: rgba($white, .1);
+
+          .message-header { position: relative; background-color: $flat-red; padding: $desktop-screen-elements-padding; }
+        }
+        .t-mobile-bill {
+          left: 0;
+
+          h3 { color: $white; font-weight: bold; }
+        }
+        .dominos-coupon {
+          .options {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 20%;
+            height: 100%;
+
+            background-color: $flat-green;
+            text-align: center;
+            h3:before {@extend %check-circle-icon; margin-right: em-calc(5px); }
+          }
+
+          h3 { color: $white; font-weight: bold; }
+        }
+        .coupon {
+          @include border-radius($desktop-frame-border-radius);
+
+          background-color: $dark-brown;
+          text-align: center;
+          color: $black;
+          bottom: -50%;
+          right: 25%;
+          height: 50%;
+          width: 50%;
+        }
+        .left-arrow, .right-arrow {
+          position: absolute;
+          top: 42%;
+          width: 1.5em;
+          background-color: rgba($flat-black, .7);
+          color: $white;
+          text-align: center;
+          z-index: 1;
+          h2 { font-size: 2em; }
+        }
+        .left-arrow { &:after { @extend %back-arrow-icon; } left: 2%; }
+        .right-arrow {
+          &:after { @extend %forward-arrow-icon; } right: 2%;
+        }
+
+        @if $desktop-app-animations-on {
+          &.animate {
+            .t-mobile-bill { @extend %animate-t-mobile-bill; }
+            .dominos-coupon { @extend %animate-dominos-coupon; }
+            .dominos-coupon .options { @extend %animate-click-claim; }
+            .coupon { @extend %animate-claim-coupon; }
+
+            .left-arrow{ @extend %animate-fade-arrows; }
+            .right-arrow { @extend %animate-click-and-fade-arrow; }
+          }
+        }
+      }
+    }
+
+  }
+}

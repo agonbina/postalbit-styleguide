@@ -1,0 +1,58 @@
+// Global mixins to the web-app-demo module
+// -----------------------------------------------------------------------
+
+//
+// Base style for the desktop frame
+//
+// @content - includes any extra styling needed for a customized frame
+
+@mixin desktop-frame-base {
+  @include border-radius($desktop-frame-border-radius);
+  @include single-box-shadow($desktop-frame-shadow);
+  @content;
+
+  position: relative;
+  width: $desktop-screen-width;
+  height: $desktop-screen-height;
+  padding-top: $desktop-frame-padding-top;
+  padding-bottom: $desktop-frame-padding-bottom;
+  padding-left: $desktop-frame-padding-left-right;
+  padding-right: $desktop-frame-padding-left-right;
+  background-color: $desktop-frame-bg-color;
+  margin: 0 auto;
+
+  // Center the rectangles inside the frame
+  text-align: center;
+}
+
+
+//
+// Base style for screen of a device
+
+@mixin desktop-screen-base {
+  @include single-box-shadow($desktop-screen-shadow);
+  @include border-bottom-radius($desktop-screen-border-bottom);
+  @content;
+
+  background-color: $desktop-screen-bg-color;
+}
+
+//
+// Base style for screen sidebar
+
+@mixin desktop-screen-sidebar-base {
+  width: $desktop-screen-sidebar-width;
+  height: $desktop-screen-sidebar-height;
+
+  background-color: $desktop-screen-sidebar-bg-color;
+  @content;
+}
+
+//
+// Base style for screen main content
+
+@mixin desktop-screen-main-base {
+  width: $desktop-screen-main-width;
+  height: $desktop-screen-main-height;
+  @content;
+}

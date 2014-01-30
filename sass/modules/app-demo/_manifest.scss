@@ -1,32 +1,32 @@
 //
 // Global variables
 //
-$frame-border-radius: em-calc(25px) !default;
-$frame-padding-top-bottom: em-calc(50px) !default;
-$frame-padding-left-right: em-calc(5px) !default;
-$frame-bg-color: $light-grey !default;
-$frame-shadow: 0 0 0 1px darken($light-grey, 15%) !default;
+$frame-border-radius:       em-calc(25px) !default;
+$frame-padding-top-bottom:  em-calc(50px) !default;
+$frame-padding-left-right:  em-calc(5px) !default;
+$frame-bg-color:            $light-grey !default;
+$frame-shadow:              0 0 0 1px darken($light-grey, 15%) !default;
 
 // Inner rectangles for the frame
-$frame-inner-rectangle-width: 35px !default;
-$frame-inner-rectangle-margin: 20px !default;
+$frame-inner-rectangle-width:   35px !default;
+$frame-inner-rectangle-margin:  20px !default;
 
-$screen-width: em-calc(280px) !default;
-$screen-height: em-calc(470px) !default;
-$screen-margin: 0 auto !default;
-$screen-bg-color: whitesmoke !default;
-$screen-font-color: $white !default;
-$screen-shadow: $frame-shadow !default;
+$screen-width:            em-calc(280px) !default;
+$screen-height:           em-calc(460px) !default;
+$screen-margin:           0 auto !default;
+$screen-bg-color:         whitesmoke !default;
+$screen-font-color:       $white !default;
+$screen-shadow:           $frame-shadow !default;
 $screen-elements-padding: 3% !default;
 
 // Screen header
-$screen-header-bg-color: $flat-blue !default;
-$screen-header-height: 12% !default;
-$screen-header-icon-spacing: 3% !default;
+$screen-header-bg-color:      $flat-blue !default;
+$screen-header-height:        12% !default;
+$screen-header-icon-spacing:  3% !default;
 
 // Screen main
-$screen-article-height: 20% !default;
-$screen-article-border-bottom: $light-grey 2px solid !default;
+$screen-article-height:         20% !default;
+$screen-article-border-bottom:  $light-grey 2px solid !default;
 
 $animations-on: true !default;
 
@@ -37,7 +37,7 @@ $animations-on: true !default;
 @import "animations";
 
 
-.frame {
+.iphone .frame {
   @include frame-base {
     width: $screen-width;
     height: $screen-height;
@@ -66,7 +66,7 @@ $animations-on: true !default;
 
 }
 
-.screen {
+.iphone .screen {
   @include screen-base{ position: relative; height: 100%; };
 
   // Styling for the header of the app-demo screen

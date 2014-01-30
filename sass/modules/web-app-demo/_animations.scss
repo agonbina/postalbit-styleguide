@@ -1,0 +1,56 @@
+
+// Animation timings
+
+$click-next-length: .2s;
+$click-next-start: .5s;
+$t-mobile-bill-slideout-length: .5s;
+$t-mobile-bill-slideout-start: $click-next-start + $click-next-length;
+$dominos-coupon-slidein-length: .6s;
+$dominos-coupon-slidein-start: $t-mobile-bill-slideout-start;
+$fade-arrows-length: .2s;
+$fade-arrows-start: $dominos-coupon-slidein-start + $dominos-coupon-slidein-length + .1s;
+$click-claim-length: .2s;
+$click-claim-start: $fade-arrows-start + $fade-arrows-length + .5s;
+$claim-coupon-length: .5s;
+$claim-coupon-start: $click-claim-length + $click-claim-start;
+
+// Keyframes
+
+@include keyframes(slide-out-left) { 100% { left: -100%; } };
+@include keyframes(slide-in-right) { 100% { right: 0; } };
+@include keyframes(click-next) { 100% { background-color: rgba($flat-black, .85);} };
+@include keyframes(click-claim) { 100% { background-color: darken($flat-green, 15%);} };
+@include keyframes(slide-up-middle) { 100% { bottom: 25%; } };
+
+@include keyframes(fade-out) { 100% { opacity: 0; } };
+
+
+// Animations
+
+$click-next-animation: click-next $click-next-length $click-next-start;
+$t-mobile-bill-animation: slide-out-left $t-mobile-bill-slideout-length $t-mobile-bill-slideout-start ease-in-out forwards;
+$dominos-coupon-animation: slide-in-right $dominos-coupon-slidein-length $dominos-coupon-slidein-start ease-in-out forwards;
+$fade-arrows-animation: fadeout $fade-arrows-length $fade-arrows-start forwards;
+$click-and-fade-arrow-animation: $click-next-animation, $fade-arrows-animation;
+$click-claim-animation: click-claim $click-claim-length $click-claim-start;
+$claim-coupon-animation: slide-up-middle $claim-coupon-length $claim-coupon-start forwards;
+
+$animations:
+  click-next $click-next-animation,
+  t-mobile-bill $t-mobile-bill-animation,
+  dominos-coupon $dominos-coupon-animation,
+  fade-arrows $fade-arrows-animation,
+  click-and-fade-arrow $click-and-fade-arrow-animation,
+  click-claim $click-claim-animation,
+  claim-coupon $claim-coupon-animation;
+
+// Generate placeholders for each animation in the animations list above
+@each $animation in $animations {
+  $animation-class: nth($animation, 1);
+  $animation-rule: nth($animation, 2);
+
+  %animate-#{$animation-class} {
+    @include animation($animation-rule);
+  }
+}
+

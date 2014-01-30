@@ -9,25 +9,28 @@
               'fontawesome-webfont.eot', normal, normal );
 
 // Unicodes for FontAwesome icons
-$fa-clock: '\f0c9';
+$fa-bars: '\f0c9';
 $fa-plus: '\f067';
 $fa-reply: '\f112';
 $fa-trash: '\f014';
 $fa-circle: '\f10c';
+$fa-full-circle: '\f111';
 $fa-back-arrow: '\f104';
+$fa-forward-arrow: '\f105';
 $fa-retweet: '\f079';
 $fa-check-circle: '\f058';
 $fa-square: '\f0c8';
 
-
 $icons-list:
-  bars $fa-clock,
+  bars $fa-bars,
   plus $fa-plus,
   reply $fa-reply,
   trash $fa-trash,
   circle $fa-circle,
+  full-circle $fa-full-circle,
   check-circle $fa-check-circle,
   back-arrow $fa-back-arrow,
+  forward-arrow $fa-forward-arrow,
   retweet $fa-retweet,
   square $fa-square;
 
@@ -38,4 +41,18 @@ $icons-list:
     content: nth($icon, 2);
     font-family: FontAwesome;
   }
+}
+
+
+// Icon classes to use in <i> tags
+.icon {
+  font-style: normal;
+
+  // Icons
+  &.circle:after { @extend %full-circle-icon; }
+
+  // Color variations
+  &.red    { color: $flat-red; }
+  &.green  { color: $flat-green; }
+  &.yellow { color: $warning-color; }
 }

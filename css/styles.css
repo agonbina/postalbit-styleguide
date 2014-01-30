@@ -744,46 +744,75 @@ dl {
   font-style: normal;
 }
 
-/* line 37, ../sass/typography/_font-awesome.scss */
-.screen .header h3:before {
+/* line 40, ../sass/typography/_font-awesome.scss */
+.iphone .screen .header h3:before, .desktop .screen main h4:before {
   content: "\f0c9";
   font-family: FontAwesome;
 }
 
-/* line 37, ../sass/typography/_font-awesome.scss */
-.screen .header h3:after {
+/* line 40, ../sass/typography/_font-awesome.scss */
+.iphone .screen .header h3:after {
   content: "\f067";
   font-family: FontAwesome;
 }
 
-/* line 37, ../sass/typography/_font-awesome.scss */
+/* line 40, ../sass/typography/_font-awesome.scss */
 main.content article.options span:nth-of-type(1):after {
   content: "\f112";
   font-family: FontAwesome;
 }
 
-/* line 37, ../sass/typography/_font-awesome.scss */
+/* line 40, ../sass/typography/_font-awesome.scss */
 main.content article.options span:nth-of-type(2):after {
   content: "\f014";
   font-family: FontAwesome;
 }
 
-/* line 37, ../sass/typography/_font-awesome.scss */
-section.secondary-screens article.letter-sent h1:before {
+/* line 40, ../sass/typography/_font-awesome.scss */
+.icon.circle:after {
+  content: "\f111";
+  font-family: FontAwesome;
+}
+
+/* line 40, ../sass/typography/_font-awesome.scss */
+section.secondary-screens article.letter-sent h1:before, .desktop .screen main .content .dominos-coupon .options h3:before {
   content: "\f058";
   font-family: FontAwesome;
 }
 
-/* line 37, ../sass/typography/_font-awesome.scss */
-main.content article.options span:nth-of-type(4):after {
+/* line 40, ../sass/typography/_font-awesome.scss */
+main.content article.options span:nth-of-type(4):after, .desktop .screen main .content .left-arrow:after {
   content: "\f104";
   font-family: FontAwesome;
 }
 
-/* line 37, ../sass/typography/_font-awesome.scss */
+/* line 40, ../sass/typography/_font-awesome.scss */
+.desktop .screen main .content .right-arrow:after {
+  content: "\f105";
+  font-family: FontAwesome;
+}
+
+/* line 40, ../sass/typography/_font-awesome.scss */
 main.content article.options span:nth-of-type(3):after {
   content: "\f079";
   font-family: FontAwesome;
+}
+
+/* line 48, ../sass/typography/_font-awesome.scss */
+.icon {
+  font-style: normal;
+}
+/* line 55, ../sass/typography/_font-awesome.scss */
+.icon.red {
+  color: #ea324d;
+}
+/* line 56, ../sass/typography/_font-awesome.scss */
+.icon.green {
+  color: #43ccb5;
+}
+/* line 57, ../sass/typography/_font-awesome.scss */
+.icon.yellow {
+  color: #f08a24;
 }
 
 /* line 40, ../sass/_globals.scss */
@@ -1085,7 +1114,7 @@ form .row textarea.column {
   padding-left: 0.5em;
 }
 
-/* line 31, ../sass/layouts/landing/_manifest.scss */
+/* line 32, ../sass/layouts/landing/_manifest.scss */
 body header {
   height: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(67, 137, 194, 0.7)), color-stop(100%, rgba(67, 137, 194, 0.7))), url('/images/junk-mail.jpeg?1389240603');
@@ -1099,34 +1128,34 @@ body header {
   text-align: center;
   background-attachment: fixed;
 }
-/* line 41, ../sass/layouts/landing/_manifest.scss */
+/* line 42, ../sass/layouts/landing/_manifest.scss */
 body header h1, body header h2 {
   color: white;
 }
-/* line 42, ../sass/layouts/landing/_manifest.scss */
+/* line 43, ../sass/layouts/landing/_manifest.scss */
 body header h1 {
   font-size: 4.5em;
   line-height: 1.33333em;
 }
-/* line 45, ../sass/layouts/landing/_manifest.scss */
+/* line 46, ../sass/layouts/landing/_manifest.scss */
 body header h1.important {
   font-size: 6em;
   line-height: 1.25em;
 }
-/* line 46, ../sass/layouts/landing/_manifest.scss */
+/* line 47, ../sass/layouts/landing/_manifest.scss */
 body header h1.title:after {
   content: 'PostalBit';
   border-bottom: 1px whitesmoke solid;
 }
 
-/* line 53, ../sass/layouts/landing/_manifest.scss */
+/* line 54, ../sass/layouts/landing/_manifest.scss */
 .slide {
   height: 100%;
   background-color: white;
   color: black;
   text-align: center;
 }
-/* line 59, ../sass/layouts/landing/_manifest.scss */
+/* line 60, ../sass/layouts/landing/_manifest.scss */
 .slide .container {
   *zoom: 1;
   max-width: 61em;
@@ -1142,33 +1171,33 @@ body header h1.title:after {
   display: table;
   clear: both;
 }
-/* line 61, ../sass/layouts/landing/_manifest.scss */
+/* line 62, ../sass/layouts/landing/_manifest.scss */
 .slide.orange {
   background-color: #ffa80d;
   color: black;
 }
-/* line 62, ../sass/layouts/landing/_manifest.scss */
+/* line 63, ../sass/layouts/landing/_manifest.scss */
 .slide.dark {
   background-color: #1a1a1a;
   color: white;
 }
-/* line 63, ../sass/layouts/landing/_manifest.scss */
+/* line 64, ../sass/layouts/landing/_manifest.scss */
 .slide.brown {
   background-color: #ece9e3;
   color: black;
 }
-/* line 67, ../sass/layouts/landing/_manifest.scss */
+/* line 68, ../sass/layouts/landing/_manifest.scss */
 .slide.first h3 {
   line-height: 1.2em;
 }
-/* line 68, ../sass/layouts/landing/_manifest.scss */
+/* line 69, ../sass/layouts/landing/_manifest.scss */
 .slide.first .clock {
   width: 32.20339%;
   float: left;
   margin-right: 1.69492%;
   display: inline;
 }
-/* line 69, ../sass/layouts/landing/_manifest.scss */
+/* line 70, ../sass/layouts/landing/_manifest.scss */
 .slide.first .direct-mail-fact {
   width: 66.10169%;
   float: right;
@@ -1176,45 +1205,45 @@ body header h1.title:after {
   *margin-left: -1em;
   display: inline;
 }
-/* line 72, ../sass/layouts/landing/_manifest.scss */
+/* line 73, ../sass/layouts/landing/_manifest.scss */
 .slide.second .text {
   width: 49.15254%;
   float: left;
   margin-right: 1.69492%;
   display: inline;
 }
-@media (max-width: 26.25em) {
-  /* line 72, ../sass/layouts/landing/_manifest.scss */
+@media (max-width: 56.25em) {
+  /* line 73, ../sass/layouts/landing/_manifest.scss */
   .slide.second .text {
     width: 100%;
     float: right;
     margin-right: 0;
-    background-color: red;
   }
 }
 /* line 79, ../sass/layouts/landing/_manifest.scss */
-.slide.second .laptop {
+.slide.second .desktop {
+  padding-top: 4.5em;
   width: 49.15254%;
   float: right;
   margin-right: 0;
   *margin-left: -1em;
   display: inline;
 }
-@media (max-width: 26.25em) {
+@media (max-width: 56.25em) {
   /* line 79, ../sass/layouts/landing/_manifest.scss */
-  .slide.second .laptop {
+  .slide.second .desktop {
     width: 100%;
     float: right;
     margin-right: 0;
-    background-color: blue;
+    padding-bottom: 3em;
   }
 }
-/* line 88, ../sass/layouts/landing/_manifest.scss */
+/* line 89, ../sass/layouts/landing/_manifest.scss */
 .slide.third h2, .slide.third h3 {
   color: white;
 }
-/* line 89, ../sass/layouts/landing/_manifest.scss */
-.slide.third .phone {
+/* line 90, ../sass/layouts/landing/_manifest.scss */
+.slide.third .iphone {
   width: 32.20339%;
   float: left;
   margin-right: 1.69492%;
@@ -1222,15 +1251,15 @@ body header h1.title:after {
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
-@media (max-width: 26.25em) {
-  /* line 89, ../sass/layouts/landing/_manifest.scss */
-  .slide.third .phone {
+@media (max-width: 56.25em) {
+  /* line 90, ../sass/layouts/landing/_manifest.scss */
+  .slide.third .iphone {
     width: 100%;
     float: right;
     margin-right: 0;
   }
 }
-/* line 95, ../sass/layouts/landing/_manifest.scss */
+/* line 96, ../sass/layouts/landing/_manifest.scss */
 .slide.third .text {
   width: 66.10169%;
   float: right;
@@ -1238,22 +1267,27 @@ body header h1.title:after {
   *margin-left: -1em;
   display: inline;
 }
-@media (max-width: 26.25em) {
-  /* line 95, ../sass/layouts/landing/_manifest.scss */
+@media (max-width: 56.25em) {
+  /* line 96, ../sass/layouts/landing/_manifest.scss */
   .slide.third .text {
     width: 100%;
     float: right;
     margin-right: 0;
-    background-color: blue;
   }
 }
-/* line 103, ../sass/layouts/landing/_manifest.scss */
+/* line 101, ../sass/layouts/landing/_manifest.scss */
 .slide.fourth {
   padding-bottom: 1.5em;
 }
 
+@media (max-width: 56.25em) {
+  /* line 108, ../sass/layouts/landing/_manifest.scss */
+  html, body {
+    font-size: 14px;
+  }
+}
 @media (max-width: 26.25em) {
-  /* line 109, ../sass/layouts/landing/_manifest.scss */
+  /* line 111, ../sass/layouts/landing/_manifest.scss */
   html, body {
     font-size: 12px;
   }
@@ -1484,7 +1518,7 @@ body header h1.title:after {
 }
 
 /* line 40, ../sass/modules/app-demo/_manifest.scss */
-.frame {
+.iphone .frame {
   -webkit-border-radius: 1.5625em;
   -moz-border-radius: 1.5625em;
   -ms-border-radius: 1.5625em;
@@ -1494,7 +1528,7 @@ body header h1.title:after {
   -moz-box-shadow: 0px 0px 5px 0 0 0 1px #c5c5c5;
   box-shadow: 0px 0px 5px 0 0 0 1px #c5c5c5;
   width: 17.5em;
-  height: 29.375em;
+  height: 28.75em;
   position: relative;
   padding: 3.125em 0.3125em;
   background-color: #ebebeb;
@@ -1502,7 +1536,7 @@ body header h1.title:after {
   text-align: center;
 }
 /* line 47, ../sass/modules/app-demo/_manifest.scss */
-.frame:before, .frame:after {
+.iphone .frame:before, .iphone .frame:after {
   content: '';
   position: absolute;
   left: 45%;
@@ -1511,7 +1545,7 @@ body header h1.title:after {
   text-align: left;
 }
 /* line 55, ../sass/modules/app-demo/_manifest.scss */
-.frame:before {
+.iphone .frame:before {
   -webkit-border-radius: 1.5625em;
   -moz-border-radius: 1.5625em;
   -ms-border-radius: 1.5625em;
@@ -1521,7 +1555,7 @@ body header h1.title:after {
   top: 4%;
 }
 /* line 60, ../sass/modules/app-demo/_manifest.scss */
-.frame:after {
+.iphone .frame:after {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -1533,7 +1567,7 @@ body header h1.title:after {
 }
 
 /* line 69, ../sass/modules/app-demo/_manifest.scss */
-.screen {
+.iphone .screen {
   -webkit-box-shadow: 0px 0px 5px 0 0 0 1px #c5c5c5;
   -moz-box-shadow: 0px 0px 5px 0 0 0 1px #c5c5c5;
   box-shadow: 0px 0px 5px 0 0 0 1px #c5c5c5;
@@ -1542,23 +1576,23 @@ body header h1.title:after {
   background-color: whitesmoke;
 }
 /* line 73, ../sass/modules/app-demo/_manifest.scss */
-.screen .header {
+.iphone .screen .header {
   background-color: #3498db;
   height: 12%;
 }
 /* line 77, ../sass/modules/app-demo/_manifest.scss */
-.screen .header h3 {
+.iphone .screen .header h3 {
   color: white;
   text-transform: uppercase;
   font-weight: bold;
 }
 /* line 81, ../sass/modules/app-demo/_manifest.scss */
-.screen .header h3:before {
+.iphone .screen .header h3:before {
   position: absolute;
   left: 3%;
 }
 /* line 86, ../sass/modules/app-demo/_manifest.scss */
-.screen .header h3:after {
+.iphone .screen .header h3:after {
   position: absolute;
   right: 3%;
 }
@@ -1692,4 +1726,455 @@ section.secondary-screens article.letter-sent h1 {
 /* line 208, ../sass/modules/app-demo/_manifest.scss */
 section.secondary-screens article.letter-sent h1:before {
   margin-right: 5%;
+}
+
+@-moz-keyframes slide-out-left {
+  /* line 19, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    left: -100%;
+  }
+}
+
+@-webkit-keyframes slide-out-left {
+  /* line 19, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    left: -100%;
+  }
+}
+
+@-o-keyframes slide-out-left {
+  /* line 19, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    left: -100%;
+  }
+}
+
+@-ms-keyframes slide-out-left {
+  /* line 19, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes slide-out-left {
+  /* line 19, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    left: -100%;
+  }
+}
+
+@-moz-keyframes slide-in-right {
+  /* line 20, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    right: 0;
+  }
+}
+
+@-webkit-keyframes slide-in-right {
+  /* line 20, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    right: 0;
+  }
+}
+
+@-o-keyframes slide-in-right {
+  /* line 20, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    right: 0;
+  }
+}
+
+@-ms-keyframes slide-in-right {
+  /* line 20, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes slide-in-right {
+  /* line 20, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    right: 0;
+  }
+}
+
+@-moz-keyframes click-next {
+  /* line 21, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    background-color: rgba(41, 45, 57, 0.85);
+  }
+}
+
+@-webkit-keyframes click-next {
+  /* line 21, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    background-color: rgba(41, 45, 57, 0.85);
+  }
+}
+
+@-o-keyframes click-next {
+  /* line 21, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    background-color: rgba(41, 45, 57, 0.85);
+  }
+}
+
+@-ms-keyframes click-next {
+  /* line 21, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    background-color: rgba(41, 45, 57, 0.85);
+  }
+}
+
+@keyframes click-next {
+  /* line 21, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    background-color: rgba(41, 45, 57, 0.85);
+  }
+}
+
+@-moz-keyframes click-claim {
+  /* line 22, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    background-color: #2a9986;
+  }
+}
+
+@-webkit-keyframes click-claim {
+  /* line 22, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    background-color: #2a9986;
+  }
+}
+
+@-o-keyframes click-claim {
+  /* line 22, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    background-color: #2a9986;
+  }
+}
+
+@-ms-keyframes click-claim {
+  /* line 22, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    background-color: #2a9986;
+  }
+}
+
+@keyframes click-claim {
+  /* line 22, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    background-color: #2a9986;
+  }
+}
+
+@-moz-keyframes slide-up-middle {
+  /* line 23, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    bottom: 25%;
+  }
+}
+
+@-webkit-keyframes slide-up-middle {
+  /* line 23, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    bottom: 25%;
+  }
+}
+
+@-o-keyframes slide-up-middle {
+  /* line 23, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    bottom: 25%;
+  }
+}
+
+@-ms-keyframes slide-up-middle {
+  /* line 23, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    bottom: 25%;
+  }
+}
+
+@keyframes slide-up-middle {
+  /* line 23, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    bottom: 25%;
+  }
+}
+
+@-moz-keyframes fade-out {
+  /* line 25, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fade-out {
+  /* line 25, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fade-out {
+  /* line 25, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes fade-out {
+  /* line 25, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  /* line 25, ../sass/modules/web-app-demo/_animations.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+/* line 52, ../sass/modules/web-app-demo/_animations.scss */
+.desktop .screen main .content.animate .t-mobile-bill {
+  -webkit-animation: slide-out-left 0.5s 0.7s ease-in-out forwards;
+  -moz-animation: slide-out-left 0.5s 0.7s ease-in-out forwards;
+  -ms-animation: slide-out-left 0.5s 0.7s ease-in-out forwards;
+  -o-animation: slide-out-left 0.5s 0.7s ease-in-out forwards;
+  animation: slide-out-left 0.5s 0.7s ease-in-out forwards;
+}
+
+/* line 52, ../sass/modules/web-app-demo/_animations.scss */
+.desktop .screen main .content.animate .dominos-coupon {
+  -webkit-animation: slide-in-right 0.6s 0.7s ease-in-out forwards;
+  -moz-animation: slide-in-right 0.6s 0.7s ease-in-out forwards;
+  -ms-animation: slide-in-right 0.6s 0.7s ease-in-out forwards;
+  -o-animation: slide-in-right 0.6s 0.7s ease-in-out forwards;
+  animation: slide-in-right 0.6s 0.7s ease-in-out forwards;
+}
+
+/* line 52, ../sass/modules/web-app-demo/_animations.scss */
+.desktop .screen main .content.animate .left-arrow {
+  -webkit-animation: fadeout 0.2s 1.4s forwards;
+  -moz-animation: fadeout 0.2s 1.4s forwards;
+  -ms-animation: fadeout 0.2s 1.4s forwards;
+  -o-animation: fadeout 0.2s 1.4s forwards;
+  animation: fadeout 0.2s 1.4s forwards;
+}
+
+/* line 52, ../sass/modules/web-app-demo/_animations.scss */
+.desktop .screen main .content.animate .right-arrow {
+  -webkit-animation: click-next 0.2s 0.5s, fadeout 0.2s 1.4s forwards;
+  -moz-animation: click-next 0.2s 0.5s, fadeout 0.2s 1.4s forwards;
+  -ms-animation: click-next 0.2s 0.5s, fadeout 0.2s 1.4s forwards;
+  -o-animation: click-next 0.2s 0.5s, fadeout 0.2s 1.4s forwards;
+  animation: click-next 0.2s 0.5s, fadeout 0.2s 1.4s forwards;
+}
+
+/* line 52, ../sass/modules/web-app-demo/_animations.scss */
+.desktop .screen main .content.animate .dominos-coupon .options {
+  -webkit-animation: click-claim 0.2s 2.1s;
+  -moz-animation: click-claim 0.2s 2.1s;
+  -ms-animation: click-claim 0.2s 2.1s;
+  -o-animation: click-claim 0.2s 2.1s;
+  animation: click-claim 0.2s 2.1s;
+}
+
+/* line 52, ../sass/modules/web-app-demo/_animations.scss */
+.desktop .screen main .content.animate .coupon {
+  -webkit-animation: slide-up-middle 0.5s 2.3s forwards;
+  -moz-animation: slide-up-middle 0.5s 2.3s forwards;
+  -ms-animation: slide-up-middle 0.5s 2.3s forwards;
+  -o-animation: slide-up-middle 0.5s 2.3s forwards;
+  animation: slide-up-middle 0.5s 2.3s forwards;
+}
+
+/* line 45, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .frame {
+  -webkit-border-radius: 0.9375em;
+  -moz-border-radius: 0.9375em;
+  -ms-border-radius: 0.9375em;
+  -o-border-radius: 0.9375em;
+  border-radius: 0.9375em;
+  -webkit-box-shadow: 0px 0px 5px 0 0 0 1px #c5c5c5;
+  -moz-box-shadow: 0px 0px 5px 0 0 0 1px #c5c5c5;
+  box-shadow: 0px 0px 5px 0 0 0 1px #c5c5c5;
+  position: relative;
+  width: 48.75em;
+  height: 26.25em;
+  padding-top: 1.875em;
+  padding-bottom: 0.3125em;
+  padding-left: 0.3125em;
+  padding-right: 0.3125em;
+  background-color: #ebebeb;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 48, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .frame .options {
+  position: absolute;
+  top: 1%;
+  width: 98%;
+  text-align: left;
+}
+/* line 54, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .frame .options .search-bar {
+  -webkit-border-radius: 0.46875em;
+  -moz-border-radius: 0.46875em;
+  -ms-border-radius: 0.46875em;
+  -o-border-radius: 0.46875em;
+  border-radius: 0.46875em;
+  position: absolute;
+  right: 2%;
+  width: 90%;
+  background-color: #c5c5c5;
+  display: inline-block;
+}
+/* line 62, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .frame .options .search-bar h6 {
+  margin-left: 5%;
+}
+/* line 67, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .screen {
+  -webkit-box-shadow: 0px 0px 5px 0 0 0 1px #c5c5c5;
+  -moz-box-shadow: 0px 0px 5px 0 0 0 1px #c5c5c5;
+  box-shadow: 0px 0px 5px 0 0 0 1px #c5c5c5;
+  -moz-border-radius-bottomleft: 0.9375em;
+  -webkit-border-bottom-left-radius: 0.9375em;
+  border-bottom-left-radius: 0.9375em;
+  -moz-border-radius-bottomright: 0.9375em;
+  -webkit-border-bottom-right-radius: 0.9375em;
+  border-bottom-right-radius: 0.9375em;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #495065;
+  overflow: hidden;
+  color: white;
+}
+/* line 75, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .screen aside, .desktop .screen main {
+  display: inline-block;
+}
+/* line 76, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .screen aside {
+  width: 20%;
+  height: 100%;
+  background-color: #292d39;
+  position: relative;
+  float: left;
+  padding: 0.3125em;
+}
+/* line 82, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .screen main {
+  width: 80%;
+  height: 100%;
+  position: relative;
+  float: left;
+  text-align: left;
+}
+/* line 87, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .screen main h4 {
+  color: white;
+}
+/* line 87, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .screen main h4:before {
+  margin-right: 0.3125em;
+}
+/* line 88, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .screen main .header {
+  width: 100%;
+  padding: 0.3125em;
+  background-color: #3498db;
+}
+/* line 93, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .screen main .content {
+  position: relative;
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+}
+/* line 99, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .screen main .content .piece {
+  position: absolute;
+  right: -100%;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0.625em;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* line 108, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .screen main .content .piece .message-header {
+  position: relative;
+  background-color: #ea324d;
+  padding: 0.3125em;
+}
+/* line 110, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .screen main .content .t-mobile-bill {
+  left: 0;
+}
+/* line 113, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .screen main .content .t-mobile-bill h3 {
+  color: white;
+  font-weight: bold;
+}
+/* line 116, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .screen main .content .dominos-coupon .options {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  background-color: #43ccb5;
+  text-align: center;
+}
+/* line 125, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .screen main .content .dominos-coupon .options h3:before {
+  margin-right: 0.3125em;
+}
+/* line 128, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .screen main .content .dominos-coupon h3 {
+  color: white;
+  font-weight: bold;
+}
+/* line 130, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .screen main .content .coupon {
+  -webkit-border-radius: 0.9375em;
+  -moz-border-radius: 0.9375em;
+  -ms-border-radius: 0.9375em;
+  -o-border-radius: 0.9375em;
+  border-radius: 0.9375em;
+  background-color: #ece9e3;
+  text-align: center;
+  color: black;
+  bottom: -50%;
+  right: 25%;
+  height: 50%;
+  width: 50%;
+}
+/* line 141, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .screen main .content .left-arrow, .desktop .screen main .content .right-arrow {
+  position: absolute;
+  top: 42%;
+  width: 1.5em;
+  background-color: rgba(41, 45, 57, 0.7);
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+/* line 149, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .screen main .content .left-arrow h2, .desktop .screen main .content .right-arrow h2 {
+  font-size: 2em;
+}
+/* line 151, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .screen main .content .left-arrow {
+  left: 2%;
+}
+/* line 152, ../sass/modules/web-app-demo/_manifest.scss */
+.desktop .screen main .content .right-arrow {
+  right: 2%;
 }

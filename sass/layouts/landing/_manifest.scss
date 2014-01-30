@@ -21,6 +21,7 @@ $border-box-sizing  : true;
 //    - class-name - name of the class because of which the breakpoint is activated
 //    - $media-layout - see Susy docs for Media-Layouts
 $phone-breakpoint: 6 em-calc(420px);
+$tablet-breakpoint: 6 em-calc(900px);
 
 
 //
@@ -71,33 +72,30 @@ body header {
   &.second {
     .text {
       @include span-columns(6, 12);
-      @include at-breakpoint($phone-breakpoint) {
+      @include at-breakpoint($tablet-breakpoint) {
         @include span-columns(6 omega);
-        background-color: red;
       }
     }
-    .laptop {
+    .desktop {
+      @include padding-leader(3);
       @include span-columns(6 omega, 12);
-      @include at-breakpoint($phone-breakpoint) {
+      @include at-breakpoint($tablet-breakpoint) {
         @include span-columns(6 omega);
-        background-color: blue;
+        @include padding-trailer(2);
       }
     }
   }
   &.third {
     h2, h3 { color: $white; }
-    .phone {
+    .iphone {
       @include span-columns(4, 12);
       @include padding-leader;
       @include padding-trailer;
-      @include at-breakpoint($phone-breakpoint) { @include span-columns(6 omega); }
+      @include at-breakpoint($tablet-breakpoint) { @include span-columns(6 omega); }
     }
     .text {
       @include span-columns(8 omega, 12);
-      @include at-breakpoint($phone-breakpoint) {
-        @include span-columns(6 omega);
-        background-color: blue;
-      }
+      @include at-breakpoint($tablet-breakpoint) { @include span-columns(6 omega); }
     }
   }
   &.fourth {
@@ -105,6 +103,10 @@ body header {
   }
 }
 
+// Responsive typography
+@include at-breakpoint($tablet-breakpoint) {
+  html, body { font-size: 14px; }
+}
 @include at-breakpoint($phone-breakpoint) {
   html, body { font-size: 12px; }
 }

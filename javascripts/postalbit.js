@@ -67,7 +67,21 @@
         }
     };
 
+    /**
+     * Query if the desktop app demo is within the viewport bounds to start the animation
+     */
+    var checkDesktopIsInViewport = function() {
+        var desktop = document.getElementById('desktop');
+
+        if(isElementInViewport(desktop)) {
+            desktop.className += ' animate';
+
+            stopTrackingElement(checkDesktopIsInViewport);
+        }
+    };
+
     trackElement(checkIphoneIsInViewport);
+    trackElement(checkDesktopIsInViewport);
 
 
 })(window);
